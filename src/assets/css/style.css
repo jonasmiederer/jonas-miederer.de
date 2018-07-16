@@ -1,0 +1,94 @@
+body {
+  position: relative;
+}
+
+#portfolio, #skills, #education, #about, #contact, #experience, #blog {
+  width: 80%;
+  margin: 100px auto;
+}
+
+header {
+  margin: -100px 0 0 0;
+}
+
+h2 {
+  color: #6200ee;
+}
+
+.accent {
+  color: #6200ee;
+}
+
+.accent-bg {
+  background: #6200ee;
+}
+
+nav.navbar {
+  background: #6200ee !important;
+  list-style-type: none;
+}
+
+.nav-link {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item span {
+  padding-right: 7px;
+}
+
+.nav-item.active {
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.nav-item:after {
+  background: #fff;
+  bottom: -1px;
+  content: '';
+  display: block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  -webkit-transition: width .3s;
+  -moz-transition: width .3s;
+  transition: width .3s;
+  width: 0;
+}
+
+.nav-item.active:after {
+  width: 100%;
+}
+
+.nav-item:hover:after {
+  width: 100%;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%236200ee' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+  color: black;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%236200ee' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+  color: black;
+}
+
+.mdc-card {
+  text-align: left;
+}
+
+.mdc-card__supporting-text {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
