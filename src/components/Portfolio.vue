@@ -521,6 +521,18 @@
               '/static/img/projects/reflectoah/main.png',
             ],
             tags: ["Web"]
+          },
+          'kneipenquiz': {
+            id: 'kneipenquiz',
+            title:
+              '11Freunde Kneipenquiz',
+            url: "https://www.11freunde.de/artikel/fussballexperten-gesucht-0",
+            teaser: 'Racanas persuadere in rusticus aboa! Eheu, castus calcaria! Racanas persuadere in rusticus aboa! Eheu, castus calcaria! Racanas persuadere in rusticus aboa! Eheu, castus calcaria! Racanas persuadere in rusticus aboa! Eheu, castus calcaria!',
+            description: 'Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.',
+            images: [
+              '/static/img/projects/reflectoah/main.png',
+            ],
+            tags: ["Web"]
           }
         },
         selectedProject: {id: '', title: ''},
