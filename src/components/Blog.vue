@@ -22,7 +22,7 @@
       </div>
     </mdc-dialog>
 
-    <div class="col-12 col-md-3 portfolio-left">
+    <div class="col-12 col-lg-3 portfolio-left">
       <mdc-icon class="accent" icon="comment"></mdc-icon>
       <h2 class="accent">Blog</h2>
 
@@ -34,9 +34,9 @@
       </div>
     </div>
 
-    <div class="col-12 col-md-9 portfolio-right">
+    <div class="col-12 col-lg-9 portfolio-right">
       <div class="row">
-        <div class="col-md-4 col-12" v-for="(blog,index) in blogs">
+        <div class="col-12 col-md-6 col-lg-4 " v-for="(blog,index) in blogs">
           <mdc-card id="blog.id" class="pf-blog mdc-card" v-bind:key="index"
                     @click.native="showDialog(blog.id)">
             <mdc-card-primary-action>

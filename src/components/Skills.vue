@@ -1,7 +1,7 @@
 <template>
   <section id="skills" class="row">
 
-    <div class="col-12 col-md-6 skills-left">
+    <div class="col-12 col-lg-6 skills-left">
       <mdc-icon class="accent" icon="trending_up"></mdc-icon>
       <h2 class="accent">Skills</h2>
 
@@ -23,7 +23,7 @@
       </div>
     </div>
 
-    <div class="col-12 col-md-6 skills-right">
+    <div class="col-12 col-lg-6 skills-right">
       <div class="skill" v-for="skill in skills">
         <div :id="skill.id">
           <div class="skill-title"><b>{{skill.title}}</b></div>

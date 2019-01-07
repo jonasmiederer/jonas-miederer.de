@@ -1,7 +1,7 @@
 <template>
   <section id="education" class="row">
 
-    <div class="col-12 col-md-3 education-left">
+    <div class="col-12 col-lg-3 education-left">
       <mdc-icon class="accent" icon="school"></mdc-icon>
       <h2 class="accent">Education</h2>
 
@@ -10,11 +10,11 @@
       </div>
     </div>
 
-    <div class="col-12 col-md-9 education-right">
+    <div class="col-12 col-lg-9 education-right">
 
       <div class="steps-wrapper" v-for="(step, index) in steps">
         <div :id="step.id">
-          <div class="row step-header">
+          <div class="step-header">
           <span>
             <svg class="accent" focusable="false" viewBox="0 0 48 48" aria-hidden="true">
               <circle cx="50%" cy="50%" r="24"></circle>
@@ -88,22 +88,12 @@
 
   .education-left {
     text-align: left;
-    padding: 20px ;
+    padding: 20px;
   }
 
   .education-left h2 {
     display: inline-block;
     padding-left: 10px;
-  }
-
-  .steps-wrapper {
-    margin: 10px 0;
-
-  }
-
-  .step-header {
-    align-items: center;
-    padding: 10px 0;
   }
 
   svg {
@@ -134,18 +124,7 @@
     flex-shrink: 0;
   }
 
-  .step-title {
-    padding-left: 24px;
-  }
-
-  .step-detail {
-    text-align: left;
-    margin-left: 8px;
-    border-left: 1px solid gray;
-    padding-left: 48px;
-  }
-
   .step-detail.last-entry {
-    border-left: 1px dashed gray;
+    border: none
   }
 </style>

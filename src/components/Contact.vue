@@ -5,7 +5,7 @@
       <mdc-icon class="accent" icon="mail"></mdc-icon>
       <h2 class="accent">Contact</h2>
     </div>
-    <div class="col-12 col-md-3 contact-left">
+    <div class="col-12 col-lg-3 contact-left">
       <div class="description">
         Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly
         with sour triple sec.All of those processors evacuate strange, modern vogons.Love is the only mind, the only
@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <div class="col-12 col-md-9 row contact-right">
+    <div class="col-12 col-lg-9 row contact-right">
       <mdc-textfield v-model="contact.name" label="Your Name" class="col-12 col-md-6" required
                      type="text"></mdc-textfield>
       <mdc-textfield v-model="contact.email" label="Your email address" class="col-12 col-md-6" required
@@ -105,7 +105,7 @@
   }
 
   .contact-right {
-    margin-top: 66px;
+    /*margin-top: 66px;*/
   }
 
   #contact-send {

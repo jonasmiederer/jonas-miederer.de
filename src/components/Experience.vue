@@ -1,7 +1,7 @@
 <template>
   <section id="experience" class="row">
 
-    <div class="col-12 col-md-3 experience-left">
+    <div class="col-12 col-lg-3 experience-left">
       <mdc-icon class="accent" icon="work"></mdc-icon>
       <h2 class="accent">Experience</h2>
 
@@ -10,11 +10,11 @@
       </div>
     </div>
 
-    <div class="col-12 col-md-9 experience-right">
+    <div class="col-12 col-lg-9 experience-right">
 
       <div class="steps-wrapper" v-for="(step, index) in steps">
         <div :id="step.id">
-          <div class="row step-header">
+          <div class="step-header">
           <span>
             <svg class="accent" focusable="false" viewBox="0 0 48 48" aria-hidden="true">
               <circle cx="50%" cy="50%" r="24"></circle>
@@ -109,56 +109,10 @@
     padding-left: 10px;
   }
 
-  .steps-wrapper {
-    margin: 10px 0;
 
-  }
-
-  .step-header {
-    align-items: center;
-    padding: 10px 0;
-  }
-
-  svg {
-    fill: currentColor;
-    width: 48px;
-    height: 48px;
-    display: block;
-    font-size: 24px;
-    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    user-select: none;
-    flex-shrink: 0;
-  }
-
-  svg text {
-    fill: #fff;
-    font-size: 16px;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  }
-
-  circle {
-    fill: currentColor;
-    width: 1em;
-    height: 1em;
-    display: inline-block;
-    font-size: 24px;
-    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    user-select: none;
-    flex-shrink: 0;
-  }
-
-  .step-title {
-    padding-left: 24px;
-  }
-
-  .step-detail {
-    text-align: left;
-    margin-left: 8px;
-    border-left: 1px solid gray;
-    padding-left: 48px;
-  }
 
   .step-detail.last-entry {
     border-left: 1px dashed gray;
   }
+
 </style>

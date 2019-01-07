@@ -3,78 +3,20 @@
 
     <mdc-dialog ref="dialog" cancel="Got it!" accept="Visit"
                 @accept="onAccept" @cancel="onCancel" :accept-disabled="selectedProject.url=== null" :scrollable="false"
-                title="" :width="'90vw'">
+                title="" :width="'90vw'" :accept-raised="true">
       <div class="dialog-body row">
         <div class="col-md-6 col-12 carousel-wrapper">
+          <swiper :options="swiperOption">
+            <swiper-slide v-for="(imagePath) in selectedProject.images">
+              <img class="img-fluid" :src="imagePath"></img>
+            </swiper-slide>
+            <div class="swiper-pagination" slot="pagination"></div>
+            <div class="swiper-button-prev" slot="button-prev"></div>
+            <div class="swiper-button-next" slot="button-next"></div>
 
-          <b-carousel id="portfolio-carousel"
-                      style="text-shadow: 1px 1px 2px #333;"
-                      controls
-                      indicators
-                      background="#fff"
-                      :interval="0"
-                      img-width="100%"
-                      img-height="480"
-                      v-model="slide"
-                      @sliding-start="onSlideStart"
-                      @sliding-end="onSlideEnd"
-          >
+          </swiper>
 
-            <div v-for="(imagePath) in selectedProject.images">
-              <b-carousel-slide :img-src="imagePath" img-blank-color="#000000"></b-carousel-slide>
-            </div>
 
-            <!---->
-
-            <!--&lt;!&ndash; Slides with custom text &ndash;&gt;-->
-            <!--<b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">-->
-            <!--<h1>Hello world!</h1>-->
-            <!--</b-carousel-slide>-->
-
-            <!--&lt;!&ndash; Slides with image only &ndash;&gt;-->
-            <!--<b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58">-->
-            <!--</b-carousel-slide>-->
-
-            <!--&lt;!&ndash; Slides with img slot &ndash;&gt;-->
-            <!--&lt;!&ndash; Note the classes .d-block and .img-fluid to prevent browser default image alignment &ndash;&gt;-->
-            <!--<b-carousel-slide>-->
-            <!--<img slot="img" class="d-block img-fluid w-100" width="1024" height="480"-->
-            <!--src="https://picsum.photos/1024/480/?image=55" alt="image slot">-->
-            <!--</b-carousel-slide>-->
-
-            <!--&lt;!&ndash; Slide with blank fluid image to maintain slide aspect ratio &ndash;&gt;-->
-            <!--<b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">-->
-            <!--<p>-->
-            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse-->
-            <!--eros felis, tincidunt a tincidunt eget, convallis vel est. Ut pellentesque-->
-            <!--ut lacus vel interdum.-->
-            <!--</p>-->
-            <!--</b-carousel-slide>-->
-
-          </b-carousel>
-
-          <!--<div class="swiper-container">-->
-          <!--&lt;!&ndash; Additional required wrapper &ndash;&gt;-->
-          <!--<div class="swiper-wrapper">-->
-
-          <!--<div class="swiper-slide" v-for="(imagePath) in selectedProject.images">-->
-          <!--&lt;!&ndash; Required swiper-lazy class and image source specified in data-src attribute &ndash;&gt;-->
-          <!--&lt;!&ndash;<img :data-src="imagePath" class="swiper-lazy">&ndash;&gt;-->
-          <!--<img :src="imagePath">-->
-          <!--&lt;!&ndash; Preloader image &ndash;&gt;-->
-          <!--&lt;!&ndash;<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>&ndash;&gt;-->
-          <!--</div>-->
-          <!--</div>-->
-          <!--&lt;!&ndash; If we need pagination &ndash;&gt;-->
-          <!--<div class="swiper-pagination"></div>-->
-
-          <!--&lt;!&ndash; If we need navigation buttons &ndash;&gt;-->
-          <!--<div class="swiper-button-prev"></div>-->
-          <!--<div class="swiper-button-next"></div>-->
-
-          <!--&lt;!&ndash; If we need scrollbar &ndash;&gt;-->
-          <!--<div class="swiper-scrollbar"></div>-->
-          <!--</div>-->
         </div>
         <div class="col-md-6 col-12 dialog-project-container">
           <div class="row">
@@ -93,7 +35,7 @@
       <!--{{selectedProject.title}}-->
     </mdc-dialog>
 
-    <div class="col-12 col-md-3 portfolio-left">
+    <div class="col-12 col-lg-3 portfolio-left">
       <mdc-icon class="accent" icon="code"></mdc-icon>
       <h2 class="accent">Portfolio</h2>
 
@@ -105,11 +47,12 @@
       </div>
     </div>
 
-    <div class="col-12 col-md-9 portfolio-right">
+    <div class="col-12 col-lg-9 portfolio-right">
       <div class="row">
-        <div class="col-md-4 col-12" v-for="(project,index) in projects">
+        <div class="col-12 col-md-6 col-lg-4 " v-for="(project,index) in projects">
           <mdc-card id="project.id" class="pf-project mdc-card" v-bind:key="index"
                     @click.native="showDialog(project.id)">
+            <!--<div>-->
             <mdc-card-primary-action>
               <mdc-card-media :src="'/static/img/projects/'+project.id+'/main.png'"
                               class="mdc-ripple-surface portfolio-card--bg-main"
@@ -121,6 +64,7 @@
             </mdc-card-header>
 
             <mdc-card-text> {{truncatedText(project.teaser)}}</mdc-card-text>
+            <!--</div>-->
             <mdc-card-actions>
               <mdc-chip-set>
                 <mdc-chip v-for="tag in project.tags">{{tag}}</mdc-chip>
@@ -134,32 +78,57 @@
 </template>
 
 <script>
-  // import MdcCard from 'vue-mdc-adapter/dist/card'
-  // import MdcCardMedia from 'vue-mdc-adapter/dist/card'
-  // import MdcCardHeader from 'vue-mdc-adapter/dist/card'
-  // import MdcDialog from 'vue-mdc-adapter/dist/dialog';
-  // import MdcButton from "vue-mdc-adapter/dist/button";
-  // import MdcIcon from "vue-mdc-adapter/dist/icon";
-
   export default {
     name: 'Portfolio',
-    components: {
-      // MdcIcon,
-      // MdcButton,
-      // MdcCardHeader,
-      // MdcCardMedia,
-      // MdcCard,
-      // MdcDialog
-    },
+    components: {},
 
     data() {
       return {
         projects: {
+          'oezil': {
+            id: 'oezil',
+            title:
+              'In Pieces',
+            url: "http://oezil.11freunde.de/english",
+            teaser: 'The Erdogan photos, a world cup debacle, Özil’s retirement and a debate about everyday racism in Germany. The Özil case polarised a nation. Chronicle of a fateful summer.',
+            description: 'Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.',
+            images: [
+              '/static/img/projects/oezil/main.png',
+              '/static/img/projects/oezil/detail_0.png',
+              '/static/img/projects/oezil/detail_1.png',
+              '/static/img/projects/oezil/detail_2.png',
+              '/static/img/projects/oezil/detail_3.png',
+              '/static/img/projects/oezil/detail_4.png',
+              '/static/img/projects/oezil/detail_5.png',
+              '/static/img/projects/oezil/detail_6.png',
+            ],
+            tags: ["Web"]
+          },
+          'java': {
+            id: 'java',
+            title:
+              'This is Java!',
+            url: "http://java.11freunde.de/english",
+            teaser: 'Since 1995 over 70 indonesian football fans died. For the Persija Jakarta ultras, every away trip could be their last. 11FREUNDE takes a road trip through a war zone',
+            description: 'Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.',
+            images: [
+              '/static/img/projects/java/main.png',
+              '/static/img/projects/java/detail_0.png',
+              '/static/img/projects/java/detail_1.png',
+              '/static/img/projects/java/detail_2.png',
+              '/static/img/projects/java/detail_3.png',
+              '/static/img/projects/java/detail_4.png',
+              '/static/img/projects/java/detail_5.png',
+              '/static/img/projects/java/detail_6.png',
+            ],
+            tags: ["Web"]
+          },
           'aussteiger': {
             id: 'aussteiger',
-            title: 'Naziaussteiger',
+            title: 'Über das Spiel zum Kampf',
             url: 'http://aussteiger.11freunde.de/',
-            teaser: 'Racanas persuadere in rusticus aboa! Eheu, castus calcaria! Racanas persuadere in rusticus aboa! Eheu, castus calcaria!',
+            teaser: 'Neonazis rekrutieren ihren Nachwuchs in Fanszenen. Wie geraten Jugendliche über den Fußball in den Rechtsextremismus? \n' +
+              'Drei Aussteiger erzählen',
             description: 'Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.',
             images: [
               '/static/img/projects/aussteiger/main.png',
@@ -175,7 +144,8 @@
             id: 'dervergessenetote',
             title: 'Der vergessene Tote',
             url: 'http://dervergessenetote.11freunde.de/',
-            teaser: 'Racanas persuadere ',
+            teaser: '1988 wurde ein Fan des 1. FC Saarbrücken beim Spiel gegen Schalke tödlich verletzt. Das Gericht verurteilte einen Hooligan von Borussia Mönchengladbach. \n' +
+              'Der Fall gibt bis heute Rätsel auf',
             description: 'Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.',
             images: [
               '/static/img/projects/dervergessenetote/main.png',
@@ -395,25 +365,6 @@
               '/static/img/projects/11f_android/detail_5.png',
             ], tags: ["Web"]
           },
-          'java': {
-            id: 'java',
-            title:
-              'This is Java!',
-            url: "http://java.11freunde.de/",
-            teaser: 'Racanas persuadere in rusticus aboa! Eheu, castus calcaria! Racanas persuadere in rusticus aboa! Eheu, castus calcaria! Racanas persuadere in rusticus aboa! Eheu, castus calcaria! Racanas persuadere in rusticus aboa! Eheu, castus calcaria!',
-            description: 'Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.',
-            images: [
-              '/static/img/projects/java/main.png',
-              '/static/img/projects/java/detail_0.png',
-              '/static/img/projects/java/detail_1.png',
-              '/static/img/projects/java/detail_2.png',
-              '/static/img/projects/java/detail_3.png',
-              '/static/img/projects/java/detail_4.png',
-              '/static/img/projects/java/detail_5.png',
-              '/static/img/projects/java/detail_6.png',
-            ],
-            tags: ["Web"]
-          },
           'adventskalender': {
             id: 'adventskalender',
             title:
@@ -537,7 +488,26 @@
         },
         selectedProject: {id: '', title: ''},
         slide: 0,
-        sliding: null
+        sliding: null,
+        lazy: true,
+        swiperOption: {
+          effect: 'flip',
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          },
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: true
+          },
+        }
       }
     },
     methods:
@@ -548,16 +518,12 @@
         }
         ,
         onAccept() {
-          window.location.href = this.selectedProject.url
+          window.open(
+            this.selectedProject.url, '_blank'
+          );
         },
         onCancel() {
 
-        },
-        onSlideStart(slide) {
-          this.sliding = true
-        },
-        onSlideEnd(slide) {
-          this.sliding = false
         },
         truncatedText(text) {
 
@@ -599,9 +565,8 @@
 
   .portfolio-right .pf-project {
     /*padding:10px;*/
-    max-height: 350px;
+    /*max-height: 350px;*/
   }
-
 
 
   .portfolio-card--bg-main {
@@ -624,8 +589,14 @@
     height: 300px;
   }
 
+  .mdc-dialog {
+    overflow-y: scroll;
+    padding-top: 60px;
+  }
+
   .mdc-dialog__surface {
     max-width: 90% !important;
+    max-height: 90vh !important;
   }
 
   .swiper-container {
@@ -655,7 +626,7 @@
 
   .dialog-project-teaser {
     text-align: left;
-    border-left: 5px solid #018786;
+    border-left: 5px solid #6200ee; /*018786;*!*/
     padding-left: 5px;
     margin-top: 50px;
   }
