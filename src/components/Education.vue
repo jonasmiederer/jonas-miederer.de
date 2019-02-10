@@ -24,7 +24,7 @@
             <h3 class="step-title">{{step.title}}</h3>
           </div>
           <div class="row step-detail" :class="{'last-entry': index === steps.length - 1}">
-            {{step.details}}
+            <p v-html="step.details"></p>
           </div>
         </div>
       </div>
@@ -48,29 +48,29 @@
             id: 'primary',
             yearStart: 2000,
             yearEnd: 2004,
-            title: 'Grundschule',
-            details: 'Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.',
+            title: 'Primary school / Grundschule',
+            details: '<a href ="https://www.luitpoldschule-schwabach.de/" target="_blank">Luitpoldgrundschule Schwabach</a>',
           },
           {
             id: 'gym',
             yearStart: 2004,
             yearEnd: 2012,
-            title: 'Wolfram-von-Eschenbach Gymnasium',
-            details: 'Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.',
+            title: 'Secondary school / Wolfram-von-Eschenbach Gymnasium',
+            details: 'In Sep 2004, I started studying at the <a href ="http://www.weg-schwabach.de/cms/index.php" target="_blank">Wolfram-von-Eschenbach Gymnasium</a> in Schwabach. This school is a so called "musisches Gymnasium", which means it is specialised in musical education. Because I started playing the guitar (classical & later also electric guitar) one year before, this was a good opportunity to exercise my hobby during school and improve my guitar skills.',
           },
           {
             id: 'bachelor',
             yearStart: 2012,
-            yearEnd: 2015,
-            title: 'Bachelor - Hochschule der Medien, Stuttgart',
-            details: 'Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.',
+            yearEnd: 2016,
+            title: 'Bachelor - Media University of Applied Sciences, Stuttgart',
+            details: 'After graduating from school, I decided to move to Stuttgart in order to study <span class="font-italic">Computer Science and Media (Medieninformatik)</span> at the <a href="https://www.hdm-stuttgart.de/" target="_blank">Media University of Applied Sciences (Hochschule der Medien)</a>  in Stuttgart. I completed the bachelor in Feb 2015 as B.Sc. with the grade 1.7',
           },
           {
             id: 'master',
-            yearStart: 2015,
+            yearStart: 2016,
             yearEnd: 2017,
-            title: 'Master - Hochschule der Medien, Stuttgart',
-            details: 'Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.',
+            title: 'Master - Media University of Applied Sciences, Stuttgart',
+            details: "The Media University in Stuttgart is a great university. That's why I decided to continue my studies in regards to the master's program there after receiving my acceptance letter. Within 3 semesters I finished my academic career as M.Sc. with the grade 1.3",
           },
         ],
       }

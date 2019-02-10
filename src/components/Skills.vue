@@ -16,7 +16,7 @@
               <h3 class="expertise-title" v-on:click="toggle(exp)"><b>{{exp.title}}</b></h3>
             </div>
             <div class="expertise-body">
-              <div class="expertise-description" v-show="!exp.collapsed">{{exp.description}}</div>
+              <div class="expertise-description" v-show="!exp.collapsed" v-html="exp.description"></div>
             </div>
           </div>
         </div>
@@ -61,72 +61,73 @@
             id: 'python',
             title: 'Python',
             level: 90,
-            projects: ['dervergessenetote']
+            projects: []
+          },
+          {
+            id: 'ai',
+            title: 'AI / ML',
+            level: 85,
+            projects: []
           },
           {
             id: 'android',
             title: 'Android',
             level: 80,
-            projects: ['11f_android']
+            projects: []
           },
           {
-            id: 'git',
-            title: 'Git',
-            level: 75,
-            projects: ['11f_android']
+            id: 'js',
+            title: 'JavaScript / node.js',
+            level: 80,
+            projects: []
           },
           {
             id: 'java',
             title: 'Java',
-            level: 60,
+            level: 75,
             projects: ['11f_android']
           },
           {
             id: 'cpp',
             title: 'C++',
             level: 40,
-            projects: ['11f_android']
-          },
-          {
-            id: 'js',
-            title: 'JavaScript / node.js',
-            level: 80,
-            projects: ['11f_android']
-          },
+            projects: []
+          }
         ],
         expertise: [
           {
             id: 'ml',
-            title: 'Machine Learning / Data Mining',
-            description: 'Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.',
+            title: 'Machine Learning / Artificial Intelligence',
+            description: 'During my master studies, I primarily focused on topics related to Artificial Intelligence, Machine Learning and Data Mining. Both hands-on programming as well as theoretical background as part of the lectures helped me to gain a in-depth understanding of this discipline which is becoming increasingly important.\nCurrently, I\'m working at the Daimler AG as Software Developer for Artificial Intelligence.',
             collapsed: false
-          },
-          {
-            id: 'android',
-            title: 'Android Development',
-            description: 'Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.',
-            collapsed: true
           },
           {
             id: 'webdev',
             title: 'Web Development',
-            description: 'Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.',
+            description: 'Most of the projects I\'ve worked on so far are web-driven projects. During school I started learning the basics of HTML, JavaScript and CSS. I liked how easy it is to get started with Web Development, all you need is a computer. That\'s the reason why I continued to teach myself other web technologies and languages like PHP, node.js, ruby and backend related topics like databases and design patterns. Although I worked as a full stack web developer during my internship and my side job, I always liked the backend development more than the frontend design part. ',
+            collapsed: true
+          },
+          {
+            id: 'android',
+            title: 'Mobile / Android Development',
+            description: 'If you already know Java, then it\'s pretty easy to get started with Android development. I first started programming Android applications as a hobby, later I did it as part of my student projects and my internship at 11Freunde. Since 2015, I\'m responsible for the development and maintenance of the <a href="https://play.google.com/store/apps/details?id=de.android.elffreunde">11Freunde App</a> with its more than 100.000+ accumulated downloads.',
             collapsed: true
           }
+
         ],
       }
     },
     methods: {
-      toggle (exp) {
+      toggle(exp) {
         var collapsed = exp.collapsed;
-          for (var ex of this.expertise){
-            if (ex.id != exp.id){
-              collapsed ? ex.collapsed=collapsed : ex.collapsed=!collapsed;
-            } else {
-              ex.collapsed = !collapsed;
-            }
+        for (var ex of this.expertise) {
+          if (ex.id != exp.id) {
+            collapsed ? ex.collapsed = collapsed : ex.collapsed = !collapsed;
+          } else {
+            ex.collapsed = !collapsed;
           }
         }
+      }
     },
     directives: {
       infocus: {
@@ -195,6 +196,7 @@
     position: absolute;
     -webkit-transition: width 2s; /* Safari */
     transition: width 2s;
+    display: none;
   }
 
   .skill-bar_value:after {

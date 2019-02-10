@@ -11,7 +11,7 @@ header {
   margin: -100px 0 0 0;
 }
 
-#about a {
+#about a, #education a, #experience a, #skills a {
   color: #6200ee !important;
 }
 
@@ -96,17 +96,24 @@ Swiper
   align-self: center;
 }
 
+.swiper-slide img {
+  max-height: 450px;
+}
+
 .swiper-pagination-bullet-active {
   background-color: #6200ee !important;
 }
 
 .swiper-button-prev {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%236200ee'%2F%3E%3C%2Fsvg%3E") !important;;
-
 }
 
 .swiper-button-next {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%236200ee'%2F%3E%3C%2Fsvg%3E") !important;
+}
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets{
+  bottom: 0 !important;
 }
 
 /*.carousel-control-next-icon {*/
@@ -121,6 +128,7 @@ Swiper
 
 .mdc-card {
   text-align: left;
+  cursor: pointer;
 }
 
 .mdc-card__supporting-text {
@@ -144,6 +152,15 @@ MDC Dialog
 .mdc-card-primary-action {
   max-height: 200px;
 }
+
+.mdc-chip {
+  margin-right: 5px;
+}
+
+.mdc-chip__text {
+  font-size: 11px;
+}
+
 
 .steps-wrapper {
   margin: 10px 0;
@@ -244,4 +261,11 @@ circle {
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
 
+}
+
+.dialog-teaser {
+  text-align: left;
+  border-left: 5px solid #6200ee; /*018786;*!*/
+  padding-left: 10px;
+  margin: 1rem 0;
 }

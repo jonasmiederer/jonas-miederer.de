@@ -24,7 +24,7 @@
             <h3 class="step-title">{{step.title}}</h3>
           </div>
           <div class="row step-detail" :class="{'last-entry': index === steps.length - 1}">
-            {{step.details}}
+            <p v-html="step.details"></p>
           </div>
         </div>
       </div>
@@ -49,8 +49,8 @@
               name: "11Freunde",
               website: "https://www.11freunde.de/"
             },
-            title: 'Praktisches Studiensemester - Web Development',
-            details: 'Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.',
+            title: 'Practical semester / internship - Web Development',
+            details: "As part of my bachelor's program, I worked as an intern for 6 months at <a href=\"https://www.11freunde.de/\" target=\"_blank\">11Freunde Verlag</a> in Berlin. My scope of responsibility included developing new web applications (front- and backend), maintaining existing applications and databases as well as various IT-related tasks",
           },
           {
             id: 'workingstudent-11f',
@@ -60,8 +60,8 @@
               name: "11Freunde",
               website: "https://www.11freunde.de/"
             },
-            title: 'Werkstudent - Full Stack Development',
-            details: 'Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.',
+            title: 'Working student - Full Stack Development',
+            details: 'I very much liked the kind of work and freedom I had during my internship at 11Freunde. Therefore I was genuinely happy about the offer to continue as a working student being able to work completely remotely. Since I already gained some experience in Android development during my studies, I also assumed responsibility for maintenance of the <a href="https://play.google.com/store/apps/details?id=de.android.elffreunde" target="_blank">11Freunde App</a>  with its more than 100.000 accumulated downloads.',
           },
           {
             id: 'master',
@@ -71,8 +71,8 @@
               name: "Daimler AG",
               website: "https://www.daimler.com/"
             },
-            title: 'Masterand - Software Development Artificial Intelligence',
-            details: 'Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.',
+            title: "Master's candidate - Software Development Artificial Intelligence",
+            details: "After writing my bachelor's thesis at the university, I decided to approach my master's thesis in collaboration with industry. I started my work at the <a href='https://www.daimler.com/' target='_blank'>Daimler AG</a> as member of the #teamPactris, which again belongs to the <a href='https://www.daimler.com/company/strategy/digitallife/' target='_blank'>DigitalLife@Daimler</a> department.",
           },
           {
             id: 'job-daimler',
@@ -83,7 +83,7 @@
               website: "https://www.daimler.com/"
             },
             title: 'Software Developer Artificial Intelligence',
-            details: 'Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.',
+            details: "With all the theoretical and practical experience I gained in the last years, I was perfectly prepared for my first fulltime job. And because I loved the work during my master's thesis, I am happy to still be part of this amazing team and to contribute my knowledge and expertise about AI and ML",
           },
         ],
       }
@@ -101,14 +101,13 @@
 
   .experience-left {
     text-align: left;
-    padding: 20px ;
+    padding: 20px;
   }
 
   .experience-left h2 {
     display: inline-block;
     padding-left: 10px;
   }
-
 
 
   .step-detail.last-entry {

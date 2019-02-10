@@ -3,10 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import VueMDCAdapter from 'vue-mdc-adapter'
 import BootstrapVue from 'bootstrap-vue'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
-
+import VueMDCAdapter from 'vue-mdc-adapter'
 
 
 import './assets/css/style.css'

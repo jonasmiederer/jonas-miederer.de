@@ -41,7 +41,7 @@
     </div>
 
     <SocialBar>
-      <SocialButton v-for="(social) in socials" :options="social"></SocialButton>
+      <SocialButton v-for="(social) in socials" :key="social.name" :options="social"></SocialButton>
     </SocialBar>
     <div>
 
@@ -83,18 +83,18 @@
             link: 'https://www.linkedin.com/in/jonas-miederer-39863912a/'
           },
           {
+            name: 'Mail',
+            class: 'btn-mail',
+            icon: 'fa-envelope',
+            color: '#2c3e50',
+            link: 'mailto:hello@jonas-miederer.de'
+          },
+          {
             name: 'Twitter',
             class: 'btn-tw',
             icon: 'fa-twitter',
             color: '#55acee',
             link: 'https://twitter.com/jonasmied'
-          },
-          {
-            name: 'Slack',
-            class: 'btn-slack',
-            icon: 'fa-slack',
-            color: '#56b68b',
-            link: ''
           },
           {
             name: 'Github',
