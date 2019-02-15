@@ -6,7 +6,7 @@
                 title="" :width="'90vw'" :accept-raised="true">
       <div class="dialog-body row">
         <div class="col-md-6 col-12 carousel-wrapper">
-          <swiper :options="swiperOption">
+          <swiper :options="swiperOption" ref="mySwiper">
             <swiper-slide v-for="(imagePath) in selectedProject.images" :key="imagePath">
 
               <video v-if="imagePath.endsWith('mp4')" class="img-fluid" :src="imagePath"></video>
@@ -595,6 +595,7 @@
       {
         showDialog: function (id) {
           this.selectedProject = this.projects[id];
+          this.$refs.mySwiper.swiper.slideTo(0,0,false);
           this.$refs.dialog.show();
         }
         ,
