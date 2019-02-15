@@ -78,7 +78,7 @@
             <!--</div>-->
             <mdc-card-actions>
               <mdc-chip-set>
-                <mdc-chip v-for="tag in project.tags" >{{tag}}</mdc-chip>
+                <mdc-chip v-for="tag in project.tags">{{tag}}</mdc-chip>
               </mdc-chip-set>
             </mdc-card-actions>
           </mdc-card>
@@ -92,9 +92,7 @@
 
   export default {
     name: 'Portfolio',
-    components: {
-
-    },
+    components: {},
 
 
     data() {
@@ -161,6 +159,8 @@
               'This website is not based on any templates, but was developed from scratch. As framwork I used Vue.js.',
             images: [
               '/static/img/projects/website/main.png',
+              '/static/img/projects/website/detail_0.png',
+              '/static/img/projects/website/detail_1.png',
             ],
             tags: ["Web", "Vue.js", "Bootstrap", "Material Design"]
           },
