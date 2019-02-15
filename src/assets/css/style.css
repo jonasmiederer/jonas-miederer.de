@@ -134,6 +134,7 @@ Swiper
 .mdc-card__supporting-text {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
 }
 
 
