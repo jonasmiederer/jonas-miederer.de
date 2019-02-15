@@ -249,14 +249,19 @@
             id: 'statistik',
             title:
               'Die Statistikhölle',
-            url: 'http://statisik.11freunde.de/',
-            teaser: 'Racanas persuadere in rusticus aboa! Eheu, castus calcaria! Racanas persuadere in rusticus aboa! Eheu, castus calcaria! Racanas persuadere in rusticus aboa! Eheu, castus calcaria! Racanas persuadere in rusticus aboa! Eheu, castus calcaria!',
-            description: 'Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.',
+            url: null, //'http://statisik.11freunde.de/',
+            teaser: 'All statistics and all information about your favourite team.',
+            description: 'How many yellow cards did Franck Ribéry receive this season? How many assists did Marco Reus score in the last game? How many times has Mario Gomez been in the starting eleven? What was the number of corner kicks of Werder Bremen in the game against Frankfurt?<br>' +
+              'The 11Freunde-Statistikhölle gives you all the information. You can get the stats for each team from the 1st to the 3rd german league. We give an comprehensive overview over the squad with lots of interesting data for each player in the team. We also provide a social aggregation with tweet, facebook posts and content from instagram for each team to keep you up to date with the latest news.' +
+              '<br><br>' +
+              'In this project I was responsible for the whole application, including the front- and backend development.',
             images: [
               '/static/img/projects/statistik/main.png',
               '/static/img/projects/statistik/detail_0.png',
               '/static/img/projects/statistik/detail_1.png',
               '/static/img/projects/statistik/detail_2.png',
+              '/static/img/projects/statistik/detail_3.png',
+              '/static/img/projects/statistik/detail_4.png',
             ],
             tags: ["Web", "PHP", "Backend", "Frontend", "MySQL", "Multimedia", "Data Aggregation"]
           },
