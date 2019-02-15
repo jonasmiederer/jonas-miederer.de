@@ -662,24 +662,11 @@
     height: 300px;
   }
 
-  .mdc-dialog {
-    overflow-y: scroll;
-    padding-top: 60px;
-  }
-
-  .mdc-dialog__surface {
-    max-width: 90% !important;
-    max-height: 90vh !important;
-  }
-
   .swiper-container {
     width: 100%;
     height: 100%;
   }
 
-  .mdc-dialog__body {
-    min-height: 250px;
-  }
 
   .dialog-body {
     height: 100%;

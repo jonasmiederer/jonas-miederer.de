@@ -142,12 +142,20 @@ Swiper
 MDC Dialog
 */
 
+.mdc-dialog {
+  overflow-y: scroll;
+  padding-top: 60px;
+}
+
+
 .mdc-dialog__surface {
   max-height: 85vh !important;
+  max-width: 1040px !important;
 }
 
 .mdc-dialog__body {
   overflow-y: scroll;
+  min-height: 250px;
 }
 
 .mdc-card-primary-action {
