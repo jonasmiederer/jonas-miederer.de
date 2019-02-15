@@ -105,7 +105,7 @@
   }
 
   .contact-right {
-    /*margin-top: 66px;*/
+    padding: 0 20px 20px 20px;
   }
 
   #contact-send {
