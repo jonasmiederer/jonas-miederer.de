@@ -577,7 +577,7 @@
         sliding: null,
         lazy: true,
         swiperOption: {
-          effect: 'flip',
+          // effect: 'flip',
           slidesPerView: 1,
           spaceBetween: 30,
           loop: true,
