@@ -9,7 +9,7 @@
           <swiper :options="swiperOption" ref="mySwiper">
             <swiper-slide v-for="(imagePath) in selectedProject.images" :key="imagePath">
 
-              <video v-if="imagePath.endsWith('mp4')" class="img-fluid" :src="imagePath"></video>
+              <video :src="imagePath" controls class="img-fluid" v-if="imagePath.endsWith('mp4')"></video>
               <img v-else class="img-fluid" :src="imagePath"></img>
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
