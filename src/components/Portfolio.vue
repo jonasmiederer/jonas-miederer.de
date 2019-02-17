@@ -303,8 +303,7 @@
               '/static/img/projects/splitts/detail_3.png',
               '/static/img/projects/splitts/detail_4.png',
               '/static/img/projects/splitts/detail_5.png',
-              '/static/img/projects/splitts/detail_6.png',
-              '/static/img/projects/splitts/detail_7.png',
+              '/static/img/projects/splitts/detail_6.png'
             ],
             tags: ["Web app", "node.js", "mongoDB", "socket.io", "Backend", "Student project"]
           },
