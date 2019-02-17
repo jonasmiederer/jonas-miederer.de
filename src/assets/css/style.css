@@ -149,13 +149,14 @@ MDC Dialog
 
 
 .mdc-dialog__surface {
-  max-height: 85vh !important;
+  height: 85vh !important;
   max-width: 1040px !important;
 }
 
 .mdc-dialog__body {
-  overflow-y: scroll;
+  overflow: hidden;
   min-height: 250px;
+  height: 100%;
 }
 
 .mdc-card-primary-action {

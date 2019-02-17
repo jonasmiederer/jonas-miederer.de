@@ -679,6 +679,10 @@
 
   .dialog-project-container {
     padding: 0 40px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .dialog-project-title {
