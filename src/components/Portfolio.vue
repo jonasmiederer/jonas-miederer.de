@@ -115,7 +115,7 @@
               '/static/img/projects/oezil/detail_5.png',
               '/static/img/projects/oezil/detail_6.png',
             ],
-            tags: ["Web", "Bootstrap", "JS", "Parallax", "Frontend"]
+            tags: ["Web", "Bootstrap", "JS", "Parallax", "Frontend", "English", "German"]
           },
           'java': {
             id: 'java',
@@ -134,7 +134,7 @@
               '/static/img/projects/java/detail_5.png',
               '/static/img/projects/java/detail_6.png',
             ],
-            tags: ["Web", "Bootstrap", "JS", "Parallax", "Frontend"]
+            tags: ["Web", "Bootstrap", "JS", "Parallax", "Frontend", "English", "German"]
           },
           // 'reflecthoa': {
           //   id: 'reflecthoa',
@@ -162,7 +162,7 @@
               '/static/img/projects/website/detail_0.png',
               '/static/img/projects/website/detail_1.png',
             ],
-            tags: ["Web", "Vue.js", "Bootstrap", "Material Design"]
+            tags: ["Web", "Vue.js", "Bootstrap", "Material Design", "English"]
           },
           'aussteiger': {
             id: 'aussteiger',
@@ -181,7 +181,7 @@
               '/static/img/projects/aussteiger/detail_3.png',
               '/static/img/projects/aussteiger/detail_4.png',
             ],
-            tags: ["Web", "Bootstrap", "JS", "Parallax", "Frontend"]
+            tags: ["Web", "Bootstrap", "JS", "Parallax", "Frontend", "German"]
           },
           'dervergessenetote': {
             id: 'dervergessenetote',
@@ -199,7 +199,7 @@
               '/static/img/projects/dervergessenetote/detail_2.png',
               '/static/img/projects/dervergessenetote/detail_3.png',
             ],
-            tags: ["Web", "Bootstrap", "JS", "Parallax", "Frontend"]
+            tags: ["Web", "Bootstrap", "JS", "Parallax", "Frontend", "German"]
           },
           'konferenz': {
             id: 'konferenz',
