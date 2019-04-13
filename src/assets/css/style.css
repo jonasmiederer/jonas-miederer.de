@@ -196,6 +196,10 @@ MDC Dialog
   padding-left: 48px;
 }
 
+.step-detail p{
+  padding-right: 10px;
+}
+
 .steps-wrapper {
   margin: 10px 0;
 
