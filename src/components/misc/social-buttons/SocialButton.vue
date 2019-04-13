@@ -1,17 +1,21 @@
 <template>
   <div type="button" class="btn btn-social btn-li">
     <a v-bind:href="options.link" target="_blank" v-bind:style="{ backgroundColor: options.color}">
-      <i class="fa" v-bind:class="options.icon"></i>
+      <mdc-icon class="fa" v-bind:class="options.icon"></mdc-icon>
     </a>
   </div>
 </template>
 
 <script>
+  // import MdcIcon from "vue-mdc-adapter/components/icon/mdc-icon";
   export default {
     name: "SocialButton",
+    components: {
+      // MdcIcon
+    },
     props: {
       options: {
-        type:Object
+        type: Object
       }
     },
   }
@@ -47,6 +51,10 @@
 
   .btn-social a:hover {
     width: 72px;
+  }
+
+  .btn-social span {
+    font-size: 16px;
   }
 
 </style>
