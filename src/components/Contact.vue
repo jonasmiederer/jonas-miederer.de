@@ -21,7 +21,7 @@
       <mdc-textfield v-model="contact.message" label="Message" class="col-12" fullwidth multiline rows="5" required
                      type="text"></mdc-textfield>
 
-      <mdc-button id="contact-send" class="col-12 col-md-3 float-right" @click="send" :disabled="buttonDisabled"
+      <mdc-button id="contact-send" class="col-12 col-md-3 float-right" @click="send"
                   :raised="true">Send
       </mdc-button>
     </div>
@@ -32,15 +32,9 @@
 
 <script>
 
-  // import MdcIcon from "vue-mdc-adapter/dist/icon";
-  // import MdcTextfield from "vue-mdc-adapter/dist/textfield";
-
   export default {
     name: 'Contact',
-    components: {
-      // MdcTextfield,
-      // MdcIcon
-    },
+    components: {},
 
 
     data() {
@@ -54,26 +48,45 @@
         snack: null,
         buttonDisabled: true,
         messages: {
-          success: "Yay, message successfully sent.",
-          error: "Sorry, the message failed to send."
+          success: "Yay, got your message!",
+          error: "Sorry, something went wrong with your message",
+          missing_information: "Please fill the required fields to send your message",
+          invalid_email: "Please enter a valid mail address"
         }
       }
     },
 
     methods: {
-      send() {
-        // TODO send message
-
+      send(e) {
+        e.preventDefault();
         var success = false;
 
-
-        this.snack = {
-          message: success ? this.messages.success : this.messages.error,
-          actionText: 'action',
-          actionHandler() {/* do action */
-          },
-        };
+        if (this.contact["name"] && this.contact["email"] && this.contact["subject"] && this.contact["message"]) {
+          if (this.validEmail(this.contact["email"])) {
+            this.$http.post('post.php', JSON.stringify(this.contact))
+              .then(function (response) {
+                success = response["body"]["success"];
+              }, function (error) {
+                console.log(error);
+              });
+            this.snack = {
+              message: success ? this.messages.success : this.messages.error
+            }
+          } else {
+            this.snack = {
+              message: this.message.invalid_email
+            };
+          }
+        } else {
+          this.snack = {
+            message: this.message.missing_information
+          };
+        }
       },
+      validEmail: function (email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+      }
     },
 
   }

@@ -6,6 +6,7 @@ import router from './router'
 import BootstrapVue from 'bootstrap-vue'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import VueMDCAdapter from 'vue-mdc-adapter'
+import VueResource from 'vue-resource'
 
 
 import './assets/css/style.css'
@@ -17,6 +18,7 @@ Vue.config.productionTip = false
 Vue.use(VueMDCAdapter)
 Vue.use(BootstrapVue)
 Vue.use(VueAwesomeSwiper)
+Vue.use(VueResource);
 
 /* eslint-disable no-new */
 window.App = new Vue({
