@@ -98,6 +98,25 @@
     data() {
       return {
         projects: {
+          'polizei': {
+            id: 'polizei',
+            title:
+              'Zwo, Eins, Risiko',
+            url: "https://polizei.11freunde.de/",
+            teaser: 'Prügeleien mit Ultras, breitbeiniges Auftreten und die große Frage nach der Finanzierung: Polizeieinsätze bei Fußballspielen sorgen auch 2019 noch für Stress. Bloß: Wie läuft so ein Einsatz überhaupt ab? Unterwegs mit der Berliner Polizei.',
+            description: 'Max Dinkelaker writes about police operations during football matches, I was responsible for the technical implementation.',
+            images: [
+              '/static/img/projects/polizei/main.png',
+              '/static/img/projects/polizei/detail_1.png',
+              '/static/img/projects/polizei/detail_2.png',
+              '/static/img/projects/polizei/detail_3.png',
+              '/static/img/projects/polizei/detail_4.png',
+              '/static/img/projects/polizei/detail_5.png',
+              '/static/img/projects/polizei/detail_6.png',
+              '/static/img/projects/polizei/detail_7.png',
+            ],
+            tags: ["Web", "Bootstrap", "JS", "Parallax", "Frontend", "German"]
+          },
           'oezil': {
             id: 'oezil',
             title:
