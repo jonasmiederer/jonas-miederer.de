@@ -22,6 +22,8 @@ export default {
 </style>
 
 <style lang="scss">
+  @import 'assets/css/style.css';
+  @import '../node_modules/material-components-web/dist/material-components-web.css';
   @import '../node_modules/bootstrap/scss/functions';
   @import '../node_modules/bootstrap/scss/bootstrap';
 </style>
