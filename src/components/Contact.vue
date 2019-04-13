@@ -7,10 +7,8 @@
     </div>
     <div class="col-12 col-lg-3 contact-left">
       <div class="description">
-        Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly
-        with sour triple sec.All of those processors evacuate strange, modern vogons.Love is the only mind, the only
-        guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those
-        processors evacuate strange, modern vogons.
+        Got any questions or remarks? Feel free to contact me! Use the form to drop me a message and I will try to reach
+        back to you as soon as possible. Thank you!
       </div>
     </div>
 
