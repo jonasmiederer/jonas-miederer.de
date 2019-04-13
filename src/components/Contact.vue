@@ -74,12 +74,12 @@
             }
           } else {
             this.snack = {
-              message: this.message.invalid_email
+              message: this.messages.invalid_email
             };
           }
         } else {
           this.snack = {
-            message: this.message.missing_information
+            message: this.messages.missing_information
           };
         }
       },
