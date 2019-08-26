@@ -66,12 +66,15 @@
             this.$http.post('post.php', JSON.stringify(this.contact))
               .then(function (response) {
                 success = response["body"]["success"];
+                this.snack = {
+                  message: success ? this.messages.success : this.messages.error
+                }
               }, function (error) {
                 console.log(error);
+                this.snack = {
+                  message: success ? this.messages.success : this.messages.error
+                }
               });
-            this.snack = {
-              message: success ? this.messages.success : this.messages.error
-            }
           } else {
             this.snack = {
               message: this.messages.invalid_email
