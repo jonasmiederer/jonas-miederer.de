@@ -98,6 +98,23 @@
         data() {
             return {
                 projects: {
+
+                    'quizneu': {
+                        id: 'quizneu',
+                        title: '11Freunde Quiz',
+                        url: 'https://11freunde.de/quiz',
+                        teaser: 'Test your knowledge about football and everything around it.',
+                        description: '',
+                        images: [
+                            '/static/img/projects/quizneu/main.png',
+                            '/static/img/projects/quizneu/detail_1.png',
+                            '/static/img/projects/quizneu/detail_2.png',
+                            '/static/img/projects/quizneu/detail_3.png',
+                            '/static/img/projects/quizneu/detail_4.png',
+                        ],
+                        tags: ['Web', 'PHP', 'Symfony', 'MySQL', 'Bootstrap', 'Backend', 'Frontend']
+                    },
+
                     'frankfurtoder': {
                         id: 'frankfurtoder',
                         title: 'Frankfurt, oder?',
