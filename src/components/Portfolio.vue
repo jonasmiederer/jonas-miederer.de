@@ -98,6 +98,20 @@
         data() {
             return {
                 projects: {
+                    'kimmich': {
+                        id: 'kimmich',
+                        title: 'The Joshua Scream',
+                        url: 'https://kimmich.11freunde.de/english.html',
+                        teaser: 'Joshua Kimmich pushes himself and his colleagues to the limit and beyond. What makes the leader of Germany’s new football generation tick?',
+                        description: 'A portrait about Joshua Kimmich: He talks about his youth, how hard the step from Stuttgart to Leipzig was and his will to win.<br><br>Text by Ron Ulrich, implementation by me.',
+                        images: [
+                            '/static/img/projects/kimmich/main.png',
+                            '/static/img/projects/kimmich/detail_1.png',
+                            '/static/img/projects/kimmich/detail_2.png',
+                            '/static/img/projects/kimmich/detail_3.png',
+                        ],
+                        tags: ['Web', 'Bootstrap', 'JS', 'Parallax', 'Frontend']
+                    },
                     'polizei': {
                         id: 'polizei',
                         title:
