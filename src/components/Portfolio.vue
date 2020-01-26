@@ -98,6 +98,24 @@
         data() {
             return {
                 projects: {
+                    '11f_android_neu': {
+                        id: '11f_android_neu',
+                        title: '11Freunde App',
+                        url: 'https://play.google.com/store/apps/details?id=de.android.elffreunde&hl=de',
+                        teaser: 'Immer auf Ballhöhe: 11Freunde informiert Sie über alle Fußball-Neuigkeiten auf und abseits des Rasens.',
+                        description: 'Die 11FREUNDE-App für Fußballkultur informiert dich täglich über die Dinge, die auf und abseits des Platzes passieren. Hier findest du Geschichten vom Ascheplatz um die Ecke und von der glitzernden Fußballwelt der europäischen Topligen. Hier liest du Interviews mit Legenden und solchen, die es werden wollen. Hier verfolgst du unseren Liveticker, der in Echtzeit von den Spielen der Bundesliga, Champions League und der Nationalmannschaft berichtet.' +
+                            '<br><br>' +
+                            'I am responsible for the development of new features, bugfixing and maintanance of this app.',
+                        images: [
+                            '/static/img/projects/11f_android_neu/main.png',
+                            '/static/img/projects/11f_android_neu/detail_0.png',
+                            '/static/img/projects/11f_android_neu/detail_1.png',
+                            '/static/img/projects/11f_android_neu/detail_2.png',
+                            '/static/img/projects/11f_android_neu/detail_3.png',
+                            '/static/img/projects/11f_android_neu/detail_4.png',
+                        ],
+                        tags: ['Android', 'WebApp', 'Firebasee', 'Mobile Development', 'Java']
+                    },
 
                     'quizneu': {
                         id: 'quizneu',
