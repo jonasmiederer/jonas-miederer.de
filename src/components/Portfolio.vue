@@ -98,6 +98,21 @@
         data() {
             return {
                 projects: {
+                    'frankfurtoder': {
+                        id: 'frankfurtoder',
+                        title: 'Frankfurt, oder?',
+                        url: 'https://frankfurtoder.11freunde.de/',
+                        teaser: 'Zwei Benfica-Fans fahren ins falsche Frankfurt. Oder doch nicht? Die Geschichte einer journalistischen Irrfahrt.',
+                        description: '', // TODO
+                        images: [
+                            '/static/img/projects/frankfurtoder/main.png',
+                            '/static/img/projects/frankfurtoder/detail_1.png',
+                            '/static/img/projects/frankfurtoder/detail_2.png',
+                            '/static/img/projects/frankfurtoder/detail_3.png',
+                            '/static/img/projects/frankfurtoder/detail_4.png',
+                        ],
+                        tags: ['Web', 'Bootstrap', 'JS', 'zuck.js', 'Story', 'Parallax', 'Frontend', 'German']
+                    },
                     'kimmich': {
                         id: 'kimmich',
                         title: 'The Joshua Scream',
