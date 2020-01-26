@@ -307,7 +307,7 @@
                         id: 'quiz',
                         title:
                             'Das 11Freunde-Quiz',
-                        url: 'http://quiz.11freunde.de/',
+                        url: null,
                         teaser: 'Das große 11Freunde Quiz. Stelle im täglichen Quiz dein Fußballwissen unter Beweis',
                         description: 'Für jede richtige Antwort gibt es maximal 10 Punkte, insgesamt hast Du 20 Sekunden Zeit, um die Frage richtig zu beantworten. Die Punkte vergeben wir nach dem Prinzip »Der Schnellste siegt«. Das heißt: Gibst Du in den Sekunden 20 bis 16 die richtige Antwort erhältst Du 10 Punkte, erfolgt die richtige Antwort in den Sekunden 15-11 gibt es 9 Punkte, alle richtigen Antworten ab der zehnten Sekunde erhalten acht Punkte. Am Ende werden alle Punkte addiert und du erhältst dein Gesamtergebnis und du siehst, wo du dich mit deinen Punkten im Gesamtverhältnis aller Quizteilnehmer einordnen kannst.\n' +
                             '<br><br>' +
@@ -554,25 +554,6 @@
                         ],
                         tags: ["Mobile Development", "Android", "Backend", "Business Logic", "IoT", "Embedded", "Student Project"]
                     },
-
-                    // 'shopping': {
-                    //   id: 'shopping',
-                    //   title:
-                    //     'Geil shoppen',
-                    //   url: null,
-                    //   teaser: 'Racanas persuadere in rusticus aboa! Eheu, castus calcaria! Racanas persuadere in rusticus aboa! Eheu, castus calcaria! Racanas persuadere in rusticus aboa! Eheu, castus calcaria! Racanas persuadere in rusticus aboa! Eheu, castus calcaria!',
-                    //   description: 'Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.Love is the only mind, the only guarantee of attitude.Place the sauerkraut in a pan, and flavor thoroughly with sour triple sec.All of those processors evacuate strange, modern vogons.',
-                    //   images: [
-                    //     '/static/img/projects/shopping/main.png',
-                    //     '/static/img/projects/shopping/detail_0.png',
-                    //     '/static/img/projects/shopping/detail_1.png',
-                    //     '/static/img/projects/shopping/detail_2.png',
-                    //     '/static/img/projects/shopping/detail_3.png',
-                    //     '/static/img/projects/shopping/detail_4.png',
-                    //     '/static/img/projects/shopping/detail_5.png',
-                    //   ],
-                    //   tags: ["Student Project", "Research", "Paper", "Experiment", "UX"]
-                    // },
                     'innoprojekt': {
                         id: 'innoprojekt',
                         title:
