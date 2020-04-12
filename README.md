@@ -4,4 +4,4 @@
 
 Based on the [Vue.js](https://vuejs.org/) frontend library, I built my own website including information about myself, my experience, some of my works and projects, etc.
 
-Check it out @ [https://jonas-miederer.de/](https://jonas-miederer.de/) ✌️
+Check it out @ [jonas-miederer.de](https://jonas-miederer.de/) ✌️
