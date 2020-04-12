@@ -9,7 +9,7 @@
         <div class="profile-hexa-0">
           <div class="profile-hexa-1">
             <div class="profile-hexa-2">
-              <img src="/static/img/about/profile5.png">
+              <img loading="eager" src="/static/img/about/profile5.png">
             </div>
           </div>
         </div>
