@@ -65,7 +65,7 @@
                     @click.native="showDialog(project.id)">
             <!--<div>-->
             <mdc-card-primary-action>
-              <mdc-card-media :src="'/static/img/projects/'+project.id+'/main.png'"
+              <mdc-card-media :src="'/static/img/projects/'+project.id+'/thumbnail.png'"
                               class="mdc-ripple-surface portfolio-card--bg-main"
                               data-project="aussteiger">
               </mdc-card-media>
