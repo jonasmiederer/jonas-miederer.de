@@ -35,20 +35,21 @@
           <div class="row">
             <!--<h4>About me:</h4>-->
             <p>
-              I am <span class="font-weight-bold">25 years old</span> and grew up in the area around Nuremberg in a
-              small city called Schwabach. Since there is not too much to experience, I decided to move to Stuttgart
-              after finishing my Abitur. Although I always
+              I am <span class="font-weight-bold">27 years old</span> and grew up in the area around Nuremberg in a
+              small city called Schwabach. After finishing Abitur I decided to move to Stuttgart. Although I always
               wanted to move to a bigger city like Berlin, Hamburg or somewhere abroad, I'm still <span
               class="font-weight-bold">living in Stuttgart</span> ,
-              because I really like my job and the people there.<br>
-
+              because I really like my job and the people there.
+            </p>
+            <p>
               During my studies at the Media University of Applied Sciences Stuttgart, I delved into Web Development
               with
               the focus on Backend Development, Business Logic and Database Administration.<br>
 
               After (or probably during) finishing my bachelor thesis, my interest shifted more towards the subject of
-              <span class="font-weight-bold">Artificial Intelligence and Machine Learning.</span> <br>
-
+              <span class="font-weight-bold">Artificial Intelligence and Machine Learning.</span>
+            </p>
+            <p>
               Luckily enough I was given the opportunity to write my master thesis at the <span
               class="font-weight-bold">Daimler AG</span> in a small but
               highly
@@ -131,7 +132,7 @@
 
         ],
         iam: [
-          "a software developer.", "interested in all kinds of technology.", "a hobby DJ.", "a guitarist.", "25 years old.", "born in Bavaria.", "working at Daimler AG.", "the worlds worst cook.", "always listening to music.", "into sports.", "excited to hear from you."
+          "a software developer.", "interested in all kinds of technology.", "a hobby DJ.", "a guitarist.", "27 years old.", "born in Bavaria.", "working at Daimler AG.", "the worlds worst cook.", "always listening to music.", "into sports.", "excited to hear from you."
         ]
       }
     },
