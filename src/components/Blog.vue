@@ -40,7 +40,7 @@
           <mdc-card id="blog.id" class="pf-blog mdc-card" v-bind:key="index"
                     @click.native="showDialog(blog.id)">
             <mdc-card-primary-action>
-              <mdc-card-media :src="(blog.external_img) ?blog.images[0]: '/static/img/blog/'+blog.id+'/main.png' "
+              <mdc-card-media :src="(blog.external_img) ?blog.images[0]: '/static/img/blog/'+blog.id+'/thumbnail.png' "
                               class="mdc-ripple-surface portfolio-card--bg-main">
               </mdc-card-media>
             </mdc-card-primary-action>
