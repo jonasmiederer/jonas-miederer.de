@@ -16,7 +16,7 @@
     "material-components-web": "^0.28.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^6.0.7",
-    "swiper": "^4.4.6",
+    "swiper": "^6.5.1",
     "typewriter-effect": "^2.5.2",
     "vue": "^2.5.16",
     "vue-awesome-swiper": "^3.1.3",
