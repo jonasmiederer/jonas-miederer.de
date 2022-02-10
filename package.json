@@ -14,7 +14,7 @@
     "bootstrap": "^4.0.0-beta.2",
     "bootstrap-vue": "^2.0.0-rc.11",
     "material-components-web": "^0.28.0",
-    "node-sass": "^4.9.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "^6.0.7",
     "swiper": "^4.4.6",
     "typewriter-effect": "^2.5.2",
