@@ -35,8 +35,8 @@ export default function Navbar() {
                 {/* </NavbarItem> */}
                
                 {/* <NavbarItem> */}
-                    <Link color="foreground" href="#">
-                        Blog
+                    <Link color="foreground" href="#contact">
+                        Contact
                     </Link>
                 {/* </NavbarItem> */}
             </NavbarContent>

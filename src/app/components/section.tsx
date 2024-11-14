@@ -10,7 +10,7 @@ const modak = Roboto_Mono({
 export default function Section({ title, content }) {
 
     return (
-        <div className="flex flex-wrap  sm:w-4/5 center my-8">
+        <div className="flex flex-wrap  w-4/5 center my-8">
             {/* shadow-sm shadow-gray-800 p-3.5 border border-slate-800 */}
             <div className="box-left w-full xl:w-1/5">
                 {/* <h1 className="font-bold bg-gradient-to-r  from-indigo-500 via-purple-500 to-pink-500 text-8xl" >{title}</h1> */}
