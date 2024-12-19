@@ -15,14 +15,26 @@ export default function PortfolioParent(items) {
 
         {items.children.map((item) => {
             return cloneElement(item, { activeItem: activeItem, setActiveItem: setActiveItem })
-        })}        
+        })}
     </div>
 
 };
 
-export function PortfolioItem({ name, description, link, image, tags, activeItem, setActiveItem }) {
+interface PortfolioItemProps {
+    name: string;
+    description: any;
+    link?: {
+        link: string;
+        text: string;
+        disabled?: boolean
+    };
+    image: string;
+    tags: string[];   
+}
 
-    return <Card className={" " + (activeItem === name ? 'col-span-2 row-span-2' : 'max-h-[320px]')} shadow="sm" key={0} isPressable onPress={() => setActiveItem(activeItem === name ? null: name)}>
+export function PortfolioItem({ name, description, link, image, tags, activeItem, setActiveItem }: PortfolioItemProps) {
+
+    return <Card className={" " + (activeItem === name ? 'col-span-2 row-span-2' : 'max-h-[320px]')} shadow="sm" key={0} isPressable onPress={() => setActiveItem(activeItem === name ? null : name)}>
         <CardHeader className="flex gap-3">
             {/* <Image
                 alt="nextui logo"
@@ -33,7 +45,8 @@ export function PortfolioItem({ name, description, link, image, tags, activeItem
             /> */}
             <div className="flex flex-col items-start">
                 <p className="text-md">{name}</p>
-                <Link isExternal showAnchorIcon href={link.link}>{link.text}</Link>
+                {link ? <Link isDisabled={link.disabled} isExternal showAnchorIcon href={link.link}>{link.text}</Link> : <div>&nbsp;</div>}
+                
             </div>
         </CardHeader>
         <Divider />
@@ -42,7 +55,7 @@ export function PortfolioItem({ name, description, link, image, tags, activeItem
                 alt="11Freunde App"
                 className="object-cover rounded-xl max-h-80 h-full "
                 src={image}
-                isZoomed={!activeItem === name}
+                isZoomed={activeItem !== name}
                 removeWrapper
             />
 
@@ -51,7 +64,7 @@ export function PortfolioItem({ name, description, link, image, tags, activeItem
         </CardBody>
         <Divider />
         <CardFooter>
-            <div className="flex gap-1">
+            <div className="flex gap-1 overflow-auto">
                 {tags.map(tag => {
                     return (<Chip>{tag}</Chip>)
                 })}
