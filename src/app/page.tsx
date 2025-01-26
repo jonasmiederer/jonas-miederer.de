@@ -1,5 +1,6 @@
 
 import About from "./components/about";
+import Certification from "./components/certification";
 import Contact from "./components/contact";
 import Experience from "./components/experience";
 import Portfolio from "./components/portfolio";
@@ -12,6 +13,10 @@ export default function Home() {
 
       <div id="about" className="flex justify-center">
         <About></About>
+      </div>
+
+      <div id="certification" className="flex justify-center">
+        <Certification></Certification>
       </div>
 
       <div id="experience" className="flex justify-center">
