@@ -9,7 +9,7 @@ import Navbar from "./navbar";
 export default function Home() {
   return (
     <div className="flex-col">
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar> */}
 
       <div id="about" className="flex justify-center">
         <About></About>
