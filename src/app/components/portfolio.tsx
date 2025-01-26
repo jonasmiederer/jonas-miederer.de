@@ -8,6 +8,7 @@ export default function Portfolio() {
     const content = <div>
         <PortfolioParent>
             <PortfolioItem
+                key={"11f-liveticker"}
                 name="11Freunde Liveticker @ ICE Portal"
                 description={
                     <div>
@@ -26,6 +27,7 @@ export default function Portfolio() {
             </PortfolioItem>
 
             <PortfolioItem
+                key={"11f-app"}
                 name="11Freunde App"
                 description={
                     <div>
@@ -44,6 +46,7 @@ export default function Portfolio() {
             </PortfolioItem>
 
             <PortfolioItem
+                key={"11f-quiz"}
                 name="11Freunde Quiz"
                 description={
                     <div>
@@ -58,6 +61,7 @@ export default function Portfolio() {
             </PortfolioItem>
 
             <PortfolioItem
+                key={"11f-frankfurt"}
                 name="Frankfurt, oder?"
                 description={
                     <div>
@@ -72,6 +76,7 @@ export default function Portfolio() {
             </PortfolioItem>
 
             <PortfolioItem
+                key={"11f-scream"}
                 name="The Joshua Scream"
                 description={
                     <div>
@@ -86,6 +91,7 @@ export default function Portfolio() {
             </PortfolioItem>
 
             <PortfolioItem
+                key={"11f-risiko"}
                 name="Zwo, Eins, Risiko"
                 description={
                     <div>
@@ -100,6 +106,7 @@ export default function Portfolio() {
             </PortfolioItem>
 
             <PortfolioItem
+                key={"11f-inpieces"}
                 name="In Pieces"
                 description={
                     <div>
@@ -114,6 +121,7 @@ export default function Portfolio() {
             </PortfolioItem>
 
             <PortfolioItem
+                key={"11f-java"}
                 name="This is Java!"
                 description={
                     <div>
@@ -130,6 +138,7 @@ export default function Portfolio() {
             </PortfolioItem>
 
             <PortfolioItem
+                key={"jm-website"}
                 name="Personal Website"
                 description={
                     <div>
@@ -148,6 +157,7 @@ export default function Portfolio() {
             </PortfolioItem>
 
             <PortfolioItem
+                key={"11f-aussteiger"}
                 name="Über das Spiel zum Kampf"
                 description={
                     <div>
@@ -162,6 +172,7 @@ export default function Portfolio() {
             </PortfolioItem>
 
             <PortfolioItem
+                key={"11f-dvt"}
                 name="Der vergessene Tote"
                 description={
                     <div>
@@ -184,6 +195,7 @@ export default function Portfolio() {
             </PortfolioItem>
 
             <PortfolioItem
+                key={"11f-konferenz"}
                 name="Die 11Freunde-Konferenz"
                 description={
                     <div>
@@ -199,12 +211,13 @@ export default function Portfolio() {
                             In this project I was responsible for the backend and business logic, developed with node.js, mongoDB and socket.io for realtime communication.
                         </p>
                     </div>
-                }                
+                }
                 image="img/11f_konferenz/image.png"
                 tags={["node.js", "mongoDB", "socket.io"]}>
             </PortfolioItem>
 
             <PortfolioItem
+                key={"11f-quiz-1"}
                 name="Das 11Freunde-Quiz (1st version)"
                 description={
                     <div>
@@ -220,12 +233,13 @@ export default function Portfolio() {
                             In this project I was responsible for the backend logic and database design/integration.
                         </p>
                     </div>
-                }                
+                }
                 image="img/11f_quiz_old/image.png"
                 tags={["PHP", "MySQL", "Symfony"]}>
             </PortfolioItem>
 
             <PortfolioItem
+                key={"11f-statistik"}
                 name="Die Statistikhölle"
                 description={
                     <div>
@@ -242,12 +256,13 @@ export default function Portfolio() {
                             In this project I was responsible for the whole application, including the front- and backend development.
                         </p>
                     </div>
-                }            
+                }
                 image="img/11f_statisik/image.png"
                 tags={["PHP", "MySQL", "Data Aggregation"]}>
             </PortfolioItem>
 
             <PortfolioItem
+                key={"11f-europa"}
                 name="11Freunde Europareise"
                 description={
                     <div>
@@ -263,12 +278,13 @@ export default function Portfolio() {
                             This project was part of the 11Freunde European Jounrney during the UEFA Euro 2016. I developed the Euromap based on PHP in the backend and Mapbox for the design of the map.
                         </p>
                     </div>
-                }                
+                }
                 image="img/11f_euromap/image.png"
                 tags={["PHP", "MySQL", "Mapbox"]}>
             </PortfolioItem>
 
             <PortfolioItem
+                key={"jm-splitts"}
                 name="Splitts"
                 description={
                     <div>
@@ -290,6 +306,7 @@ export default function Portfolio() {
             </PortfolioItem>
 
             <PortfolioItem
+                key={"jm-hireme"}
                 name="hireMe"
                 description={
                     <div>
@@ -318,6 +335,7 @@ export default function Portfolio() {
             </PortfolioItem>
 
             <PortfolioItem
+                key={"jm-demoscopia"}
                 name="Demoscopia"
                 description={
                     <div>
@@ -341,6 +359,7 @@ export default function Portfolio() {
             </PortfolioItem>
 
             <PortfolioItem
+                key={"jm-bardora"}
                 name="Bardora"
                 description={
                     <div>
@@ -362,6 +381,7 @@ export default function Portfolio() {
             </PortfolioItem>
 
             <PortfolioItem
+                key={"jm-lorry"}
                 name="Lorry"
                 description={
                     <div>
@@ -383,6 +403,7 @@ export default function Portfolio() {
             </PortfolioItem>
 
             <PortfolioItem
+                key={"11f-kneipenquiz"}
                 name="11Freunde Kneipenquiz"
                 description={
                     <div>
@@ -391,12 +412,12 @@ export default function Portfolio() {
                         </p>
                         <br></br>
                         <p>
-                        The 11FREUNDE editors will test your soccer knowledge in several rounds of questions. Get ready for audio and video clips, unprecedented and shocking footage.
-                        Of course, this time the greatest soccer experts will also be celebrated accordingly and given princely gifts - in other words, they won't go home empty-handed.
+                            The 11FREUNDE editors will test your soccer knowledge in several rounds of questions. Get ready for audio and video clips, unprecedented and shocking footage.
+                            Of course, this time the greatest soccer experts will also be celebrated accordingly and given princely gifts - in other words, they won't go home empty-handed.
                         </p>
                         <br></br>
                         <p>
-                        I developed the 11Freunde Kneipenquiz as a web application. One part of the application is the frontend, visible to the users participating at the Kneipenquiz, the other part is the backend / admin system, which the moderator uses to control the frontend, switch the screens, edit questions and teams and update the ranking
+                            I developed the 11Freunde Kneipenquiz as a web application. One part of the application is the frontend, visible to the users participating at the Kneipenquiz, the other part is the backend / admin system, which the moderator uses to control the frontend, switch the screens, edit questions and teams and update the ranking
                         </p>
                     </div>
                 }

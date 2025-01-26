@@ -21,6 +21,7 @@ export default function PortfolioParent(items) {
 };
 
 interface PortfolioItemProps {
+    key: string,
     name: string;
     description: any;
     link?: {
@@ -32,9 +33,9 @@ interface PortfolioItemProps {
     tags: string[];   
 }
 
-export function PortfolioItem({ name, description, link, image, tags, activeItem, setActiveItem }: PortfolioItemProps) {
+export function PortfolioItem({ key, name, description, link, image, tags, activeItem, setActiveItem }: PortfolioItemProps) {
 
-    return <Card className={" " + (activeItem === name ? 'col-span-2 row-span-2' : 'max-h-[320px]')} shadow="sm" key={0} isPressable onPress={() => setActiveItem(activeItem === name ? null : name)}>
+    return <Card className={" " + (activeItem === name ? 'col-span-2 row-span-2' : 'max-h-[320px]')} shadow="sm" key={key} isPressable onPress={() => setActiveItem(activeItem === name ? null : name)}>
         <CardHeader className="flex gap-3">
             {/* <Image
                 alt="nextui logo"
@@ -65,8 +66,8 @@ export function PortfolioItem({ name, description, link, image, tags, activeItem
         <Divider />
         <CardFooter>
             <div className="flex gap-1 overflow-auto">
-                {tags.map(tag => {
-                    return (<Chip>{tag}</Chip>)
+                {tags.map((tag, index) => {
+                    return (<Chip key={`${key}-${index}`}>{tag}</Chip>)
                 })}
 
             </div>

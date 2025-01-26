@@ -87,7 +87,7 @@ export default function Certification() {
 
                         {provider.map((certification, jndex) => {
                             return (
-                                <Link href={certification.link} isExternal> 
+                                <Link key={`cert-${index}-${jndex}`} href={certification.link} isExternal> 
                                     <Image
                                         key={`cert-${index}-${jndex}`}
                                         alt={certification.title}

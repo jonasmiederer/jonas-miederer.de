@@ -8,7 +8,7 @@ import { Link } from "@nextui-org/link";
 export default function Contact() {
 
 
-    const content = <div className="flex flex-col md:flex-row w-full justify-between">
+    const content = <div className="flex flex-col md:flex-row w-full justify-between" >
 
         <div className="md:w-5/12 w-full flex flex-col gap-2 justify-center">
             <Button
