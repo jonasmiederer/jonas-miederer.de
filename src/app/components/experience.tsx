@@ -9,7 +9,7 @@ export default function Experience() {
         <CV>
             <CVItem
                 year="2024"
-                title="Solution Architect @ AWS / Amazon"
+                title="Solutions Architect @ AWS / Amazon"
                 description="Designing & architecting scalable & secure cloud solutions helping customers to benefit from the AWS cloud">
             </CVItem>
 
