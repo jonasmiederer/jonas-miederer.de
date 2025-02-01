@@ -43,3 +43,8 @@ h1 {
     text-wrap: balance;
   }
 }
+
+a {
+  text-decoration: underline;
+  text-decoration-color:rgb(98, 0, 238);
+}

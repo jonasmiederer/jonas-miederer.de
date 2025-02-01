@@ -91,12 +91,11 @@ export default function Certification() {
                                     <Image
                                         key={`cert-${index}-${jndex}`}
                                         alt={certification.title}
-                                        className=" max-w-[100px]"
+                                        className=" max-w-[80px]"
                                         src={certification.img}
                                         isZoomed
                                         removeWrapper
-                                        width={100}
-                                    // height="100%"
+                                        width={80}
                                     />
                                 </Link>
                             );

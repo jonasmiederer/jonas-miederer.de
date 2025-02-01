@@ -15,12 +15,12 @@ export default function Portfolio() {
             }
         >
             <PortfolioItem
-                key={"11f-liveticker"}
+                key={"11f-bahnapi"}
                 name="11Freunde Liveticker @ ICE Portal"
                 description={
                     <div>
                         <p>
-                            Die 11FREUNDE-App für Fußballkultur informiert dich täglich über die Dinge, die auf und abseits des Platzes passieren. Hier findest du Geschichten vom Ascheplatz um die Ecke und von der glitzernden Fußballwelt der europäischen Topligen. Hier liest du Interviews mit Legenden und solchen, die es werden wollen. Hier verfolgst du unseren Liveticker, der in Echtzeit von den Spielen der Bundesliga, Champions League und der Nationalmannschaft berichtet.
+                        Im ICE Portal der Deutschen Bahn können Reisende während ihrer Fahrt auf vielfältige Entertainment-Angebote zugreifen, darunter Filme, Serien, Hörbücher, Podcasts und Magazine. Ein besonderes Highlight ist der Liveticker von 11FREUNDE, der es ermöglicht, Fußballspiele direkt im Zug zu verfolgen. So können Passagiere beispielsweise die Spiele der Fußball-Europameisterschaft live mitverfolgen, ohne den Zug verlassen zu müssen.
                         </p>
                         <br></br>
                         <p>
@@ -28,8 +28,9 @@ export default function Portfolio() {
                         </p>
                     </div>
                 }
-                image="img/11f_app/app.png"
-                tags={["Android", "Java", "Firebase"]}
+                link={{ link: "https://iceportal.de/", text: "iceportal.de" }}
+                image="img/11f_bahnapi/image.jpg"
+                tags={["PHP", "API", "Lumen"]}
             >
             </PortfolioItem>
 
