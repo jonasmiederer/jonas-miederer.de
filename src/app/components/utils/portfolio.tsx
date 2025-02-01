@@ -5,22 +5,28 @@ import { Link } from "@nextui-org/link";
 import { Image } from "@nextui-org/image";
 import { Divider } from "@nextui-org/divider";
 import { Chip } from "@nextui-org/chip";
-import { useState, cloneElement } from "react";
+import { useState, cloneElement, ReactElement, Children, PropsWithChildren } from "react";
+import React from "react";
 
-export default function PortfolioParent(items) {
+
+interface PortfolioParentType {
+    children: ReactElement<PartialPortfolioItemProps>[],
+    renderItem: Function
+}
+export default function PortfolioParent({ children, renderItem }: PortfolioParentType) {
 
     const [activeItem, setActiveItem] = useState(null);
 
-    return <div className="grid gap-2 xl:gap-4 grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-
-        {items.children.map((item) => {
-            return cloneElement(item, { activeItem: activeItem, setActiveItem: setActiveItem })
-        })}
-    </div>
-
+    return (
+        <div className="grid gap-2 xl:gap-4 grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+            {children.map((item) => {
+                return renderItem(item, activeItem, setActiveItem);
+            })}
+        </div>
+    );
 };
 
-interface PortfolioItemProps {
+export interface PortfolioItemProps {
     key: string,
     name: string;
     description: any;
@@ -30,12 +36,16 @@ interface PortfolioItemProps {
         disabled?: boolean
     };
     image: string;
-    tags: string[];   
+    tags: string[];
+    activeItem?: string | null;
+    setActiveItem?: Function
 }
 
-export function PortfolioItem({ key, name, description, link, image, tags, activeItem, setActiveItem }: PortfolioItemProps) {
+export type PartialPortfolioItemProps = Omit<PortfolioItemProps, 'activeItems' | 'setActiveItems'>
 
-    return <Card className={" " + (activeItem === name ? 'col-span-2 row-span-2' : 'max-h-[320px]')} shadow="sm" key={key} isPressable onPress={() => setActiveItem(activeItem === name ? null : name)}>
+export function PortfolioItem({ key, name, description, link, image, tags, activeItem, setActiveItem }: PartialPortfolioItemProps) {
+
+    return <Card className={" " + (activeItem === name ? 'col-span-2 row-span-2' : 'max-h-[320px]')} shadow="sm" key={key} isPressable onPress={() => setActiveItem && setActiveItem(activeItem === name ? null : name)}>
         <CardHeader className="flex gap-3">
             {/* <Image
                 alt="nextui logo"
@@ -45,9 +55,9 @@ export function PortfolioItem({ key, name, description, link, image, tags, activ
                 width={40}
             /> */}
             <div className="flex flex-col items-start">
-                <p className="text-md">{name}</p>
+                <p className="text-md text-left">{name}</p>
                 {link ? <Link isDisabled={link.disabled} isExternal showAnchorIcon href={link.link}>{link.text}</Link> : <div>&nbsp;</div>}
-                
+
             </div>
         </CardHeader>
         <Divider />

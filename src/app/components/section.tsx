@@ -1,13 +1,19 @@
 import { Roboto_Mono } from 'next/font/google'
+import { ReactElement } from 'react'
 
 const modak = Roboto_Mono({
     subsets: ['latin'],
     variable: '--font-roboto-mono',
     display: 'swap',
-  })
+})
 
 
-export default function Section({ title, content }) {
+interface SectionType {
+    title: string,
+    content: ReactElement<any, any>
+}
+
+export default function Section({ title, content }: SectionType) {
 
     return (
         <div className="flex flex-wrap  w-4/5 center my-8">

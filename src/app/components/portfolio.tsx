@@ -1,12 +1,19 @@
+'use client'
+
+import { ReactElement, useState } from "react";
 import Section from "./section";
-import PortfolioParent, { PortfolioItem } from "./utils/portfolio";
+import PortfolioParent, { PartialPortfolioItemProps, PortfolioItem, PortfolioItemProps } from "./utils/portfolio";
 
 
 export default function Portfolio() {
 
-
     const content = <div>
-        <PortfolioParent>
+        <PortfolioParent
+            renderItem={(item: ReactElement, activeItem: string, setActiveItem: Function) =>
+                <PortfolioItem key={item.key} {...{ activeItem, setActiveItem, ...item.props }} />
+
+            }
+        >
             <PortfolioItem
                 key={"11f-liveticker"}
                 name="11Freunde Liveticker @ ICE Portal"
@@ -21,9 +28,9 @@ export default function Portfolio() {
                         </p>
                     </div>
                 }
-                link={{ link: "https://play.google.com/store/apps/details?id=de.android.elffreunde&hl=de", text: "play.google.com" }}
                 image="img/11f_app/app.png"
-                tags={["Android", "Java", "Firebase"]}>
+                tags={["Android", "Java", "Firebase"]}
+            >
             </PortfolioItem>
 
             <PortfolioItem
@@ -162,7 +169,7 @@ export default function Portfolio() {
                 description={
                     <div>
                         <p>
-                            The 11 Freunde page "Aussteiger" delves into the stories of footballers who left professional sports behind for unconventional paths. It examines their motivations, challenges, and how they navigate life beyond football, shedding light on personal transformations and societal perspectives.
+                            The 11 Freunde page &quot;Aussteiger&quot; delves into the stories of footballers who left professional sports behind for unconventional paths. It examines their motivations, challenges, and how they navigate life beyond football, shedding light on personal transformations and societal perspectives.
                         </p>
                     </div>
                 }
@@ -344,7 +351,7 @@ export default function Portfolio() {
                         </p>
                         <br></br>
                         <p>
-                            Do you know this? You have to create a survey for a term paper, your bachelor's thesis or maybe even your master's thesis. But how do you get people to take part? If you advertise your survey via the mailing list, there will only be grumbling and the student wallet is usually too small for Amazon vouchers
+                            Do you know this? You have to create a survey for a term paper, your bachelor&apos;s thesis or maybe even your master&apos;s thesis. But how do you get people to take part? If you advertise your survey via the mailing list, there will only be grumbling and the student wallet is usually too small for Amazon vouchers
 
                             This is where Demoscopia comes into play. On our platform, you can easily create your surveys and forward them to your fellow students. The highlight: Only those who have already answered surveys on Demoscopia can create them. This means that anyone looking for participants for their surveys must first take part in them themselves. In the end, everyone is the winner - because one good turn deserves another.
                         </p>
@@ -386,7 +393,7 @@ export default function Portfolio() {
                 description={
                     <div>
                         <p className="italic">
-                            Don't Worry, Use Lorry. The interactive and smart driving time assistant.
+                            Don&apos;t Worry, Use Lorry. The interactive and smart driving time assistant.
                         </p>
                         <br></br>
                         <p>
@@ -413,7 +420,7 @@ export default function Portfolio() {
                         <br></br>
                         <p>
                             The 11FREUNDE editors will test your soccer knowledge in several rounds of questions. Get ready for audio and video clips, unprecedented and shocking footage.
-                            Of course, this time the greatest soccer experts will also be celebrated accordingly and given princely gifts - in other words, they won't go home empty-handed.
+                            Of course, this time the greatest soccer experts will also be celebrated accordingly and given princely gifts - in other words, they won&apos;t go home empty-handed.
                         </p>
                         <br></br>
                         <p>
