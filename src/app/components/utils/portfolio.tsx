@@ -45,7 +45,7 @@ export type PartialPortfolioItemProps = Omit<PortfolioItemProps, 'activeItems' |
 
 export function PortfolioItem({ key, name, description, link, image, tags, activeItem, setActiveItem }: PartialPortfolioItemProps) {
 
-    return <Card className={" " + (activeItem === name ? 'col-span-2 row-span-2' : 'max-h-[320px]')} shadow="sm" key={key} isPressable onPress={() => setActiveItem && setActiveItem(activeItem === name ? null : name)}>
+    return <Card className={" " + (activeItem === name ? 'col-span-2 row-span-2' : 'max-h-[320px]')} shadow-sm="sm" key={key} isPressable onPress={() => setActiveItem && setActiveItem(activeItem === name ? null : name)}>
         <CardHeader className="flex gap-3">
             {/* <Image
                 alt="nextui logo"
