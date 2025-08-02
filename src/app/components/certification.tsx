@@ -55,6 +55,11 @@ export default function Certification() {
                 link: 'https://www.credly.com/badges/6fede625-3053-41a3-ba16-047ee224cfa9/public_url'
             },
             {
+                title: 'AWS Certified AI Practitioner',
+                img: 'https://images.credly.com/size/220x220/images/4d4693bb-530e-4bca-9327-de07f3aa2348/image.png',
+                link: 'https://www.credly.com/badges/556dce0f-c55d-4acb-8e33-9856de61ce72/public_url'
+            },
+            {
                 title: 'AWS Certified Developer – Associate',
                 img: 'https://images.credly.com/size/680x680/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png',
                 link: 'https://www.credly.com/badges/f64ff104-b64a-4a9b-99c0-09397d2cf923/public_url'
@@ -63,6 +68,11 @@ export default function Certification() {
                 title: 'AWS Certified Solutions Architect – Associate',
                 img: 'https://images.credly.com/size/680x680/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png',
                 link: 'https://www.credly.com/badges/8365ac22-7660-40d0-ab70-fa9f53f761ef/public_url'
+            },
+            {
+                title: 'AWS Certified Solutions Architect – Professional',
+                img: 'https://images.credly.com/size/110x110/images/2d84e428-9078-49b6-a804-13c15383d0de/image.png',
+                link: 'https://www.credly.com/badges/c64ce7ef-490b-407a-8455-7d4d1156047f/public_url'
             },
         ], [
             {
