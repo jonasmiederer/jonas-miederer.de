@@ -1,7 +1,7 @@
 'use client';
-import { Link } from "@nextui-org/link";
+import { Link } from "@heroui/link";
 import Section from "./section";
-import { Image } from "@nextui-org/image";
+import { Image } from "@heroui/image";
 
 export default function Certification() {
 
@@ -11,7 +11,7 @@ export default function Certification() {
                 title: 'Microsoft Certified: Azure Fundamentals',
                 img: 'https://images.credly.com/size/680x680/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png',
                 link: 'https://learn.microsoft.com/api/credentials/share/en-us/JonasMiederer-8663/C4014C89BCC513AF?sharingId=76C45D8E11517B0'
-            },
+            },            
             {
                 title: 'Microsoft Certified: Azure Data Fundamentals',
                 img: 'https://images.credly.com/size/680x680/images/70eb1e3f-d4de-4377-a062-b20fb29594ea/azure-data-fundamentals-600x600.png',

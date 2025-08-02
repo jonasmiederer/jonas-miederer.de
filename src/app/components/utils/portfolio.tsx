@@ -1,10 +1,10 @@
 'use client';
 
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
-import { Link } from "@nextui-org/link";
-import { Image } from "@nextui-org/image";
-import { Divider } from "@nextui-org/divider";
-import { Chip } from "@nextui-org/chip";
+import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card";
+import { Link } from "@heroui/link";
+import { Image } from "@heroui/image";
+import { Divider } from "@heroui/divider";
+import { Chip } from "@heroui/chip";
 import { useState, cloneElement, ReactElement, Children, PropsWithChildren } from "react";
 import React from "react";
 

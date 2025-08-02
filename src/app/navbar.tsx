@@ -1,11 +1,11 @@
 'use client'
-import { Link } from "@nextui-org/link";
+import { Link } from "@heroui/link";
 import {
     Navbar as NavbarUI,
     NavbarContent,
     NavbarItem,
     NavbarMenuToggle,
-} from "@nextui-org/navbar";
+} from "@heroui/navbar";
 import { useState } from "react";
 
 export default function Navbar() {

@@ -1,8 +1,8 @@
-import { Button } from "@nextui-org/button";
+import { Button } from "@heroui/button";
 import Section from "./section";
-import { Divider } from "@nextui-org/divider";
+import { Divider } from "@heroui/divider";
 import Form from "./utils/form";
-import { Link } from "@nextui-org/link";
+import { Link } from "@heroui/link";
 
 
 export default function Contact() {
