@@ -5,7 +5,7 @@ import { Input, Textarea } from "@heroui/input";
 import { useEffect, useState } from "react";
 import { addToast } from "@heroui/toast";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'error' ;
+const API_URL = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL + 'contact' : 'error';
 
 export default function Form() {
 
