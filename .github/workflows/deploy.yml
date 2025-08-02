@@ -3,9 +3,13 @@
 
 name: Build & deploy
 
+env:
+  AWS_REGION: eu-central-1
+  AWS_API_GW_STAGE_NAME: prod
+
 on:
   push:
-    branches: [ "v2" ]  
+    branches: [ "v2", "deploy"]  
 
 jobs:
   build:
@@ -18,6 +22,21 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+    - id: install-aws-cli
+      uses: unfor19/install-aws-cli-action@v1
+      with:
+        version: 2                         # default
+        verbose: false                     # default
+        arch: amd64 
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v4.2.1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{env.AWS_REGION}}
+        role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}        
+        role-duration-seconds: 1200
+        role-session-name: GithubSession
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
@@ -25,6 +44,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
+    - run: 
+        API_ID=$(aws apigateway get-rest-apis --query 'items[?name==`ContactAPI`].id | [0]')
+        export API_URL=https://${API_ID}.execute-api.${{env.AWS_REGION}}.amazonaws.com/${{env.AWS_API_GW_STAGE_NAME}}/
+        echo $API_URL
     - run: npm run build --if-present
 
     - uses: keithweaver/aws-s3-github-action@v1.0.0
@@ -34,4 +57,4 @@ jobs:
         destination: ${{ vars.S3_BUCKET }}
         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws_region: eu-central-1
+        aws_region: ${{env.AWS_REGION}}
