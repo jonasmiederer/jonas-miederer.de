@@ -47,7 +47,7 @@ jobs:
     - run: >
         API_ID=$(aws apigateway get-rest-apis --query 'items[?name==`ContactAPI`].id | [0]' --output text);
         export API_URL=https://${API_ID}.execute-api.${{env.AWS_REGION}}.amazonaws.com/${{env.AWS_API_GW_STAGE_NAME}}/;
-        print $API_URL
+        echo $API_URL
     - run: npm run build --if-present
 
     - uses: keithweaver/aws-s3-github-action@v1.0.0
