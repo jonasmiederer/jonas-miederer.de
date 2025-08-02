@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
+import { ToastProvider } from "@heroui/toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       </head>
       <body className="purple-dark text-foreground bg-background bg-background font-sans antialiased" >
         <Providers>
+          <ToastProvider />
           {children}
         </Providers>
       </body>

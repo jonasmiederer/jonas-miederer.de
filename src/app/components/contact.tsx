@@ -4,7 +4,6 @@ import { Divider } from "@heroui/divider";
 import Form from "./utils/form";
 import { Link } from "@heroui/link";
 
-
 export default function Contact() {
 
 

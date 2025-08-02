@@ -3,7 +3,9 @@
 import { Button } from "@heroui/button";
 import { Input, Textarea } from "@heroui/input";
 import { useEffect, useState } from "react";
+import { addToast } from "@heroui/toast";
 
+const API_URL = process.env.API_URL || 'error' ;
 
 export default function Form() {
 
@@ -15,10 +17,39 @@ export default function Form() {
 
     useEffect(() => {
         checkValidity()
-     }, [name, mail, message]);
+    }, [name, mail, message]);
 
+    async function submit() {
+        if (isValid) {
+            const res = await fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, mail, message })
+            });
 
-    function checkValidity() {        
+            if (res && res.ok) {
+                console.log(await res.json())
+                addToast({
+                    title: "I've got mail 🥹",
+                    description: "Thanks for your message!",
+                    timeout: 3000,
+                    shouldShowTimeoutProgress: true,
+                    color: "success"
+                });
+            } else {
+                addToast({
+                    title: "Whoops, something went wrong.. 🤕",
+                    description: "I'm sorry, please try again later or contact me via mail",
+                    timeout: 3000,
+                    shouldShowTimeoutProgress: true,
+                    color: "danger"
+                });
+            }
+
+        }
+    }
+
+    function checkValidity() {
         if (name != "" && mail != "" && message != "") {
             setIsValid(true)
         } else {
@@ -54,10 +85,10 @@ export default function Form() {
                 isRequired
                 variant="underlined"
                 value={message}
-                onValueChange={val => { setMessage(val)}}
+                onValueChange={val => { setMessage(val) }}
             />
 
-            <Button className="w-full" size="sm" variant="flat" isDisabled={!isValid}>
+            <Button className="w-full" size="sm" variant="flat" isDisabled={!isValid} onClick={submit}>
                 Submit
             </Button>
         </div>

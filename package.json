@@ -19,6 +19,7 @@
     "@heroui/navbar": "^2.2.22",
     "@heroui/system": "2.4.20",
     "@heroui/theme": "^2.4.20",
+    "@heroui/toast": "^2.0.14",
     "framer-motion": "^12.23.12",
     "next": "^15.4.5",
     "react": "^19.1.1",
