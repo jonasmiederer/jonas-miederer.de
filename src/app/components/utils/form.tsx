@@ -27,8 +27,7 @@ export default function Form() {
                 body: JSON.stringify({ name, mail, message })
             });
 
-            if (res && res.ok) {
-                console.log(await res.json())
+            if (res && res.ok) {                
                 addToast({
                     title: "I've got mail 🥹",
                     description: "Thanks for your message!",
@@ -36,6 +35,9 @@ export default function Form() {
                     shouldShowTimeoutProgress: true,
                     color: "success"
                 });
+                setName("");
+                setMail("");
+                setMessage("");
             } else {
                 addToast({
                     title: "Whoops, something went wrong.. 🤕",
