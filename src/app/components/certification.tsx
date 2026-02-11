@@ -70,6 +70,11 @@ export default function Certification() {
                 link: 'https://www.credly.com/badges/8365ac22-7660-40d0-ab70-fa9f53f761ef/public_url'
             },
             {
+                title: 'AWS Certified Machine Learning Engineer – Associate',
+                img: 'https://images.credly.com/size/220x220/images/1a634b4e-3d6b-4a74-b118-c0dcb429e8d2/image.png',
+                link: 'https://www.credly.com/badges/c3df37b2-118b-486c-b842-96cd1125f8c8/public_url'
+            },
+            {
                 title: 'AWS Certified Solutions Architect – Professional',
                 img: 'https://images.credly.com/size/110x110/images/2d84e428-9078-49b6-a804-13c15383d0de/image.png',
                 link: 'https://www.credly.com/badges/c64ce7ef-490b-407a-8455-7d4d1156047f/public_url'
