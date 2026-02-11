@@ -9,12 +9,16 @@ env:
 
 on:
   push:
-    branches: [ "v2", "deploy"]  
+    branches: [ "master"]
+  pull_request:
+    types: [closed]
+    branches: [ "master" ]  
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
 
     strategy:
       matrix:
