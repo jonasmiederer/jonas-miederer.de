@@ -22,7 +22,6 @@ export default function Portfolio() {
                         <p>
                         Im ICE Portal der Deutschen Bahn können Reisende während ihrer Fahrt auf vielfältige Entertainment-Angebote zugreifen, darunter Filme, Serien, Hörbücher, Podcasts und Magazine. Ein besonderes Highlight ist der Liveticker von 11FREUNDE, der es ermöglicht, Fußballspiele direkt im Zug zu verfolgen. So können Passagiere beispielsweise die Spiele der Fußball-Europameisterschaft live mitverfolgen, ohne den Zug verlassen zu müssen.
                         </p>
-                        <br></br>
                         <p>
                             I am responsible for the development of new features, bugfixing and maintanance of this app.
                         </p>
@@ -42,7 +41,6 @@ export default function Portfolio() {
                         <p>
                             Die 11FREUNDE-App für Fußballkultur informiert dich täglich über die Dinge, die auf und abseits des Platzes passieren. Hier findest du Geschichten vom Ascheplatz um die Ecke und von der glitzernden Fußballwelt der europäischen Topligen. Hier liest du Interviews mit Legenden und solchen, die es werden wollen. Hier verfolgst du unseren Liveticker, der in Echtzeit von den Spielen der Bundesliga, Champions League und der Nationalmannschaft berichtet.
                         </p>
-                        <br></br>
                         <p>
                             I am responsible for the development of new features, bugfixing and maintanance of this app.
                         </p>
@@ -133,8 +131,7 @@ export default function Portfolio() {
                 name="This is Java!"
                 description={
                     <div>
-                        <p className="italic">Since 1995 over 70 indonesian football fans died. For the Persija Jakarta ultras, every away trip could be their last. 11FREUNDE takes a road trip through a war zone</p>
-                        <br></br>
+                        <p className="italic text-default-600 font-medium">Since 1995 over 70 indonesian football fans died. For the Persija Jakarta ultras, every away trip could be their last. 11FREUNDE takes a road trip through a war zone</p>
                         <p>
                             Everyone knows about the english Premier League, La Liga in Spain or the german Bundesliga. But what do you know about indonesian football? A football culture with one of the most hardcore fans of the world. Where fans do everything to support their club. And by everything, I mean everything: Since 1995, the indonesian football has seen 70 deaths. Ron Ulrich writes about a roadtrip through the country, I was responsible for the technical implementation.
                         </p>
@@ -150,8 +147,7 @@ export default function Portfolio() {
                 name="Personal Website"
                 description={
                     <div>
-                        <p className="italic">My personal website including my portfolio, papers, skills and other useless information.</p>
-                        <br></br>
+                        <p className="italic text-default-600 font-medium">My personal website including my portfolio, papers, skills and other useless information.</p>
                         <p>
                             Here you can find some information about me. Information about my education and my experience. You can see samples from my portfolio as well as my blog posts and research papers. Furthermore I give an overview over my skills and you can contact me here. So feel free to visit my homepage.
 

@@ -60,7 +60,7 @@ export function PortfolioItem({ name, description, link, image, tags, activeItem
             </div>
         </CardHeader>
         <Divider />
-        <CardBody>
+        <CardBody className="overflow-hidden">
             <Image
                 alt="11Freunde App"
                 className="object-cover rounded-xl max-h-80 h-full "
@@ -70,7 +70,7 @@ export function PortfolioItem({ name, description, link, image, tags, activeItem
             />
 
 
-            {activeItem === name && <p>{description}</p>}
+            {activeItem === name && <div className="mt-4 text-sm leading-relaxed space-y-3">{description}</div>}
         </CardBody>
         <Divider />
         <CardFooter>
