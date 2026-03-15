@@ -9,8 +9,8 @@ export default function Portfolio() {
 
     const content = <div>
         <PortfolioParent
-            renderItem={(item: ReactElement, activeItem: string, setActiveItem: Function) =>
-                <PortfolioItem key={item.key} {...{ activeItem, setActiveItem, ...item.props }} />
+            renderItem={(item: ReactElement, activeItem: string, setActiveItem: Function, index: number, columns: number) =>
+                <PortfolioItem key={item.key} {...{ activeItem, setActiveItem, index, columns, ...item.props }} />
 
             }
         >
@@ -22,7 +22,6 @@ export default function Portfolio() {
                         <p>
                         Im ICE Portal der Deutschen Bahn können Reisende während ihrer Fahrt auf vielfältige Entertainment-Angebote zugreifen, darunter Filme, Serien, Hörbücher, Podcasts und Magazine. Ein besonderes Highlight ist der Liveticker von 11FREUNDE, der es ermöglicht, Fußballspiele direkt im Zug zu verfolgen. So können Passagiere beispielsweise die Spiele der Fußball-Europameisterschaft live mitverfolgen, ohne den Zug verlassen zu müssen.
                         </p>
-                        <br></br>
                         <p>
                             I am responsible for the development of new features, bugfixing and maintanance of this app.
                         </p>
@@ -42,7 +41,6 @@ export default function Portfolio() {
                         <p>
                             Die 11FREUNDE-App für Fußballkultur informiert dich täglich über die Dinge, die auf und abseits des Platzes passieren. Hier findest du Geschichten vom Ascheplatz um die Ecke und von der glitzernden Fußballwelt der europäischen Topligen. Hier liest du Interviews mit Legenden und solchen, die es werden wollen. Hier verfolgst du unseren Liveticker, der in Echtzeit von den Spielen der Bundesliga, Champions League und der Nationalmannschaft berichtet.
                         </p>
-                        <br></br>
                         <p>
                             I am responsible for the development of new features, bugfixing and maintanance of this app.
                         </p>
@@ -133,8 +131,7 @@ export default function Portfolio() {
                 name="This is Java!"
                 description={
                     <div>
-                        <p className="italic">Since 1995 over 70 indonesian football fans died. For the Persija Jakarta ultras, every away trip could be their last. 11FREUNDE takes a road trip through a war zone</p>
-                        <br></br>
+                        <p className="italic text-default-600 font-medium">Since 1995 over 70 indonesian football fans died. For the Persija Jakarta ultras, every away trip could be their last. 11FREUNDE takes a road trip through a war zone</p>
                         <p>
                             Everyone knows about the english Premier League, La Liga in Spain or the german Bundesliga. But what do you know about indonesian football? A football culture with one of the most hardcore fans of the world. Where fans do everything to support their club. And by everything, I mean everything: Since 1995, the indonesian football has seen 70 deaths. Ron Ulrich writes about a roadtrip through the country, I was responsible for the technical implementation.
                         </p>
@@ -150,8 +147,7 @@ export default function Portfolio() {
                 name="Personal Website"
                 description={
                     <div>
-                        <p className="italic">My personal website including my portfolio, papers, skills and other useless information.</p>
-                        <br></br>
+                        <p className="italic text-default-600 font-medium">My personal website including my portfolio, papers, skills and other useless information.</p>
                         <p>
                             Here you can find some information about me. Information about my education and my experience. You can see samples from my portfolio as well as my blog posts and research papers. Furthermore I give an overview over my skills and you can contact me here. So feel free to visit my homepage.
 
@@ -184,14 +180,14 @@ export default function Portfolio() {
                 name="Der vergessene Tote"
                 description={
                     <div>
-                        <p className="italic">
+                        <p className="italic text-default-600 font-medium">
                             In 1988, a fan of 1. FC Saarbrücken was fatally injured during a match against Schalke. The court convicted a hooligan from Borussia Mönchengladbach. The case remains a mystery to this day
                         </p>
-                        <br></br>
+                        
                         <p>
                             There have been two known fatalities in German soccer to date. But there is a third: in September 1988, exactly 30 years ago, a Saarbrücken fan died in a brawl. The trail leads back to “Hogesa”.
                         </p>
-                        <br></br>
+                        
                         <p>
                             This report by Ron Ulrich is definitely worth a read and the impressive illustrations by Andrew Thomson perfectly fit to the mood of the text. I was responsible for the technical implementation.
                         </p>
@@ -207,14 +203,14 @@ export default function Portfolio() {
                 name="Die 11Freunde-Konferenz"
                 description={
                     <div>
-                        <p className="italic">
+                        <p className="italic text-default-600 font-medium">
                             All matches, all goals, live ticker, grandstand and the best tweets - real-time live ticker for the Bundesliga with social feed
                         </p>
-                        <br></br>
+                        
                         <p>
                             Humorous, social, exciting, interactive and always with the most useful and useless facts for the saturday afternoon games: That is the 11Freunde Bundesligakonferenz. All important events such as goals, penalties or substitutions are brought to you in realtime with comments by an 11Freunde editor. The Twitter feed collects the best and merriest contributions from the web, while the survey reflects the opinions of the users.
                         </p>
-                        <br></br>
+                        
                         <p>
                             In this project I was responsible for the backend and business logic, developed with node.js, mongoDB and socket.io for realtime communication.
                         </p>
@@ -229,14 +225,14 @@ export default function Portfolio() {
                 name="Das 11Freunde-Quiz (1st version)"
                 description={
                     <div>
-                        <p className="italic">
+                        <p className="italic text-default-600 font-medium">
                             The big 11Freunde quiz. Put your soccer knowledge to the test in the daily quiz
                         </p>
-                        <br></br>
+                        
                         <p>
                             A maximum of 10 points is awarded for each correct answer, and you have a total of 20 seconds to answer the question correctly. The points are awarded according to the principle of “the fastest wins”. This means: If you give the correct answer in seconds 20 to 16, you receive 10 points, if you give the correct answer in seconds 15-11, you receive 9 points, all correct answers from the tenth second onwards receive eight points. At the end, all the points are added up and you receive your overall result and you can see where your points place you in the overall ranking of all quiz participants.
                         </p>
-                        <br></br>
+                        
                         <p>
                             In this project I was responsible for the backend logic and database design/integration.
                         </p>
@@ -251,15 +247,15 @@ export default function Portfolio() {
                 name="Die Statistikhölle"
                 description={
                     <div>
-                        <p className="italic">
+                        <p className="italic text-default-600 font-medium">
                             All statistics and all information about your favourite team.
                         </p>
-                        <br></br>
+                        
                         <p>
                             How many yellow cards did Franck Ribéry receive this season? How many assists did Marco Reus score in the last game? How many times has Mario Gomez been in the starting eleven? What was the number of corner kicks of Werder Bremen in the game against Frankfurt?
                             The 11Freunde-Statistikhölle gives you all the information. You can get the stats for each team from the 1st to the 3rd german league. We give an comprehensive overview over the squad with lots of interesting data for each player in the team. We also provide a social aggregation with tweet, facebook posts and content from instagram for each team to keep you up to date with the latest news.
                         </p>
-                        <br></br>
+                        
                         <p>
                             In this project I was responsible for the whole application, including the front- and backend development.
                         </p>
@@ -274,14 +270,14 @@ export default function Portfolio() {
                 name="11Freunde Europareise"
                 description={
                     <div>
-                        <p className="italic">
+                        <p className="italic text-default-600 font-medium">
                             Together with Hyundai, we are going in search of fan culture in Europe. And you can be part of it. In our map you will find all the latest travel photos, video reports and stories from our trip to Europe at a glance.
                         </p>
-                        <br></br>
+                        
                         <p>
                             The 11FREUNDE European journey - join us on the fan culture road trip Together with Hyundai, we are going in search of fan culture in Europe. And you can be part of it. In our map you will find all the latest travel photos, video reports and stories from our European trip at a glance.
                         </p>
-                        <br></br>
+                        
                         <p>
                             This project was part of the 11Freunde European Jounrney during the UEFA Euro 2016. I developed the Euromap based on PHP in the backend and Mapbox for the design of the map.
                         </p>
@@ -296,14 +292,14 @@ export default function Portfolio() {
                 name="Splitts"
                 description={
                     <div>
-                        <p className="italic">
+                        <p className="italic text-default-600 font-medium">
                             Splitts - The easy way to share costs and expenses
                         </p>
-                        <br></br>
+                        
                         <p>
                             Tired of those awkward cost splitting moments with your friends? Splitts lets you just focus on having fun during your group activities. No account is needed, you can create ad-hoc groups on the fly. Our algorithm calculates the share for each participant and tracks, whether it was already payed. For Splitts no app is required, because it was developed as a mobile-optimized web app.
                         </p>
-                        <br></br>
+                        
                         <p>
                             In this project I was responsible for the backend development of the web app in node.js and the mongoDB database. The focus was laid on realtime events with socket.io and the no-account philosophy with sessions.
                         </p>
@@ -318,10 +314,10 @@ export default function Portfolio() {
                 name="hireMe"
                 description={
                     <div>
-                        <p className="italic">
+                        <p className="italic text-default-600 font-medium">
                             hireMe - Apply with just one click
                         </p>
-                        <br></br>
+                        
                         <p>
                             Forget switching between job advertisement, job portal, writing program, attachments and e-mail. With the hireMe button, you can apply with just one click.
 
@@ -332,7 +328,7 @@ export default function Portfolio() {
                             Analytics: Where do my applicants come from? How many interested parties are applying? Analytics can be used to analyze and optimize these key figures.
 
                         </p>
-                        <br></br>
+                        
                         <p>
                             In this student project I was responsible for the backend development and database design and integration.
                         </p>
@@ -347,16 +343,16 @@ export default function Portfolio() {
                 name="Demoscopia"
                 description={
                     <div>
-                        <p className="italic">
+                        <p className="italic text-default-600 font-medium">
                             The platform for student surveys - Because one good turn deserves another.
                         </p>
-                        <br></br>
+                        
                         <p>
                             Do you know this? You have to create a survey for a term paper, your bachelor&apos;s thesis or maybe even your master&apos;s thesis. But how do you get people to take part? If you advertise your survey via the mailing list, there will only be grumbling and the student wallet is usually too small for Amazon vouchers
 
                             This is where Demoscopia comes into play. On our platform, you can easily create your surveys and forward them to your fellow students. The highlight: Only those who have already answered surveys on Demoscopia can create them. This means that anyone looking for participants for their surveys must first take part in them themselves. In the end, everyone is the winner - because one good turn deserves another.
                         </p>
-                        <br></br>
+                        
                         <p>
                             In this project I was responsible for the backend business logic and database (mongoDB), written in JavaScript (node.js).
                         </p>
@@ -371,14 +367,14 @@ export default function Portfolio() {
                 name="Bardora"
                 description={
                     <div>
-                        <p className="italic">
+                        <p className="italic text-default-600 font-medium">
                             Bardora, the platform for bars in your town.
                         </p>
-                        <br></br>
+                        
                         <p>
                             We are Bardora, the platform for bars in your city. From countless bars, we show you results according to your location quickly, clearly and personalized. Our data and opening hours come first-hand from the bar owners. What counts for us is what you like! Four different bar categories allow you to find your favorite bars. This clearly distinguishes Bardora from comparable apps. Find out about prices, distance and happy hour times. Discover the nightlife in all its diversity and get to know new locations! Help Bardora become even better and rate bars with a Like. Simply create a user account and off you go.
                         </p>
-                        <br></br>
+                        
                         <p>
                             This project was a combination of Android Development and Embedded Systems. We created a local bar guide with several features (such as a pub crawl planner) and combined it with an alcohol tester that tells the user whether he is allowed to drive. I was responsible for the development of the android app and the integration of the alcohol sensor.
                         </p>
@@ -393,14 +389,14 @@ export default function Portfolio() {
                 name="Lorry"
                 description={
                     <div>
-                        <p className="italic">
+                        <p className="italic text-default-600 font-medium">
                             Don&apos;t Worry, Use Lorry. The interactive and smart driving time assistant.
                         </p>
-                        <br></br>
+                        
                         <p>
                             A planning tool that dynamically and intelligently suggests rest areas for breaks, taking into account the parking situation, traffic and applicable laws. This allows the driver to plan the rest areas for his breaks at the start of his tour. All relevant information about the rest area is made available to the driver for the selection. For example, a built-in rating system, the fuel price or services such as a restaurant, car wash or overnight accommodation are displayed depending on the configured point of interest.
                         </p>
-                        <br></br>
+                        
                         <p>
                             This project was part of the Daimler Truck App Challenge, a challenge to find new and innovative ways to support truck drivers. I was responsible for the development of the Android App, with its main element, the interactive driving times wheel.
                         </p>
@@ -415,15 +411,15 @@ export default function Portfolio() {
                 name="11Freunde Kneipenquiz"
                 description={
                     <div>
-                        <p className="italic">
+                        <p className="italic text-default-600 font-medium">
                             The 11FREUNDE editors will test your soccer knowledge in several rounds of questions. Get ready for audio and video clips, previously unknown and shocking footage.
                         </p>
-                        <br></br>
+                        
                         <p>
                             The 11FREUNDE editors will test your soccer knowledge in several rounds of questions. Get ready for audio and video clips, unprecedented and shocking footage.
                             Of course, this time the greatest soccer experts will also be celebrated accordingly and given princely gifts - in other words, they won&apos;t go home empty-handed.
                         </p>
-                        <br></br>
+                        
                         <p>
                             I developed the 11Freunde Kneipenquiz as a web application. One part of the application is the frontend, visible to the users participating at the Kneipenquiz, the other part is the backend / admin system, which the moderator uses to control the frontend, switch the screens, edit questions and teams and update the ranking
                         </p>

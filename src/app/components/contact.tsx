@@ -33,12 +33,13 @@ export default function Contact() {
             <Button
                 radius="full"
                 className="bg-linear-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
-                href="mailto:hello@jonas-miederer.de"
+                href="https://www.instagram.com/jonas___mj"
                 isExternal
                 as={Link}
             >
-                Mail
+                Instagram
             </Button>
+
         </div>
 
         <div className="md:hidden my-10">
