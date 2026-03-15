@@ -61,13 +61,15 @@ export function PortfolioItem({ name, description, link, image, tags, activeItem
         </CardHeader>
         <Divider />
         <CardBody className="overflow-hidden">
+            <div className="overflow-hidden rounded-xl w-full">
             <Image
                 alt="11Freunde App"
-                className="object-cover rounded-xl max-h-80 h-full "
+                className="object-cover rounded-xl max-h-80 h-full w-full"
                 src={image}
                 isZoomed={activeItem !== name}
                 removeWrapper
             />
+            </div>
 
 
             {activeItem === name && <div className="mt-4 text-sm leading-relaxed space-y-3">{description}</div>}
