@@ -28,7 +28,7 @@ export default function Portfolio() {
                     </div>
                 }
                 link={{ link: "https://iceportal.de/", text: "iceportal.de" }}
-                image="img/11f_bahnapi/image.jpg"
+                image="img/11f_bahnapi/image.webp"
                 tags={["PHP", "API", "Lumen"]}
             >
             </PortfolioItem>
@@ -47,7 +47,7 @@ export default function Portfolio() {
                     </div>
                 }
                 link={{ link: "https://play.google.com/store/apps/details?id=de.android.elffreunde&hl=de", text: "play.google.com" }}
-                image="img/11f_app/app.png"
+                image="img/11f_app/app.webp"
                 tags={["Android", "Java", "Firebase"]}>
             </PortfolioItem>
 
@@ -62,7 +62,7 @@ export default function Portfolio() {
                     </div>
                 }
                 link={{ link: "https://www.11freunde.de/quiz", text: "11freunde.de/quiz" }}
-                image="img/11f_quiz/image.png"
+                image="img/11f_quiz/image.webp"
                 tags={["Web", "PHP", "Symphony", "MySQL"]}>
             </PortfolioItem>
 
@@ -77,7 +77,7 @@ export default function Portfolio() {
                     </div>
                 }
                 link={{ link: "https://frankfurtoder.11freunde.de/", text: "frankfurtoder.11freunde.de" }}
-                image="img/11f_frankfurtoder/image.png"
+                image="img/11f_frankfurtoder/image.webp"
                 tags={["Web", "Bootstrap", "Parallax"]}>
             </PortfolioItem>
 
@@ -92,7 +92,7 @@ export default function Portfolio() {
                     </div>
                 }
                 link={{ link: "https://kimmich.11freunde.de/english.html", text: "kimmich.11freunde.de" }}
-                image="img/11f_kimmich/image.png"
+                image="img/11f_kimmich/image.webp"
                 tags={["Web", "Bootstrap", "Parallax"]}>
             </PortfolioItem>
 
@@ -107,7 +107,7 @@ export default function Portfolio() {
                     </div>
                 }
                 link={{ link: "https://polizei.11freunde.de/", text: "polizei.11freunde.de" }}
-                image="img/11f_polizei/image.png"
+                image="img/11f_polizei/image.webp"
                 tags={["Web", "Bootstrap", "Parallax"]}>
             </PortfolioItem>
 
@@ -122,7 +122,7 @@ export default function Portfolio() {
                     </div>
                 }
                 link={{ link: "https://oezil.11freunde.de/", text: "oezil.11freunde.de", disabled: true }}
-                image="img/11f_oezil/image.png"
+                image="img/11f_oezil/image.webp"
                 tags={["Web", "Bootstrap", "Parallax"]}>
             </PortfolioItem>
 
@@ -138,7 +138,7 @@ export default function Portfolio() {
                     </div>
                 }
                 link={{ link: "https://java.11freunde.de/", text: "java.11freunde.de", disabled: true }}
-                image="img/11f_java/image.png"
+                image="img/11f_java/image.webp"
                 tags={["Web", "Bootstrap", "Parallax"]}>
             </PortfolioItem>
 
@@ -156,7 +156,7 @@ export default function Portfolio() {
                     </div>
                 }
                 link={{ link: "https://jonas-miederer.de/", text: "jonas-miederer.de", disabled: false }}
-                image="img/jonas-miederer/old/image.png"
+                image="img/jonas-miederer/old/image.webp"
                 tags={["Web", "Vue.js", "Bootstrap"]}>
             </PortfolioItem>
 
@@ -171,7 +171,7 @@ export default function Portfolio() {
                     </div>
                 }
                 link={{ link: "https://aussteiger.11freunde.de/", text: "aussteiger.11freunde.de", disabled: false }}
-                image="img/11f_aussteiger/image.png"
+                image="img/11f_aussteiger/image.webp"
                 tags={["Web", "Bootstrap", "Parallax"]}>
             </PortfolioItem>
 
@@ -194,7 +194,7 @@ export default function Portfolio() {
                     </div>
                 }
                 link={{ link: "https://dervergessenetote.11freunde.de/", text: "dervergessenetote.11freunde.de", disabled: true }}
-                image="img/11f_vergessenertoter/image.png"
+                image="img/11f_vergessenertoter/image.webp"
                 tags={["Web", "Bootstrap", "Parallax"]}>
             </PortfolioItem>
 
@@ -216,7 +216,7 @@ export default function Portfolio() {
                         </p>
                     </div>
                 }
-                image="img/11f_konferenz/image.png"
+                image="img/11f_konferenz/image.webp"
                 tags={["node.js", "mongoDB", "socket.io"]}>
             </PortfolioItem>
 
@@ -238,7 +238,7 @@ export default function Portfolio() {
                         </p>
                     </div>
                 }
-                image="img/11f_quiz_old/image.png"
+                image="img/11f_quiz_old/image.webp"
                 tags={["PHP", "MySQL", "Symfony"]}>
             </PortfolioItem>
 
@@ -261,7 +261,7 @@ export default function Portfolio() {
                         </p>
                     </div>
                 }
-                image="img/11f_statisik/image.png"
+                image="img/11f_statisik/image.webp"
                 tags={["PHP", "MySQL", "Data Aggregation"]}>
             </PortfolioItem>
 
@@ -283,7 +283,7 @@ export default function Portfolio() {
                         </p>
                     </div>
                 }
-                image="img/11f_euromap/image.png"
+                image="img/11f_euromap/image.webp"
                 tags={["PHP", "MySQL", "Mapbox"]}>
             </PortfolioItem>
 
@@ -305,7 +305,7 @@ export default function Portfolio() {
                         </p>
                     </div>
                 }
-                image="img/splitts/image.png"
+                image="img/splitts/image.webp"
                 tags={["node.js", "mongoDB", "socket.io"]}>
             </PortfolioItem>
 
@@ -334,7 +334,7 @@ export default function Portfolio() {
                         </p>
                     </div>
                 }
-                image="img/hireme/image.png"
+                image="img/hireme/image.webp"
                 tags={["PHP", "Yii", "MySQL"]}>
             </PortfolioItem>
 
@@ -358,7 +358,7 @@ export default function Portfolio() {
                         </p>
                     </div>
                 }
-                image="img/demoscopia/image.png"
+                image="img/demoscopia/image.webp"
                 tags={["node.js", "mongoDB", "Web"]}>
             </PortfolioItem>
 
@@ -380,7 +380,7 @@ export default function Portfolio() {
                         </p>
                     </div>
                 }
-                image="img/bardora/image.png"
+                image="img/bardora/image.webp"
                 tags={["Android", "IoT", "Embedded"]}>
             </PortfolioItem>
 
@@ -402,7 +402,7 @@ export default function Portfolio() {
                         </p>
                     </div>
                 }
-                image="img/lorry/image.png"
+                image="img/lorry/image.webp"
                 tags={["Android", "UX", "Java"]}>
             </PortfolioItem>
 
@@ -425,7 +425,7 @@ export default function Portfolio() {
                         </p>
                     </div>
                 }
-                image="img/11f_kneipenquiz/image.png"
+                image="img/11f_kneipenquiz/image.webp"
                 tags={["node.js", "mongoDB", "Bootstrap"]}>
             </PortfolioItem>
 
