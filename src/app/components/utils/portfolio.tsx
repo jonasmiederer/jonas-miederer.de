@@ -5,83 +5,77 @@ import { Link } from "@heroui/link";
 import { Image } from "@heroui/image";
 import { Divider } from "@heroui/divider";
 import { Chip } from "@heroui/chip";
-import { useState, cloneElement, ReactElement, Children, PropsWithChildren } from "react";
-import React from "react";
-
-
-interface PortfolioParentType {
-    children: ReactElement<PartialPortfolioItemProps>[],
-    renderItem: Function
-}
-export default function PortfolioParent({ children, renderItem }: PortfolioParentType) {
-
-    const [activeItem, setActiveItem] = useState(null);
-
-    return (
-        <div className="grid gap-2 xl:gap-4 grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-            {children.map((item) => {
-                return renderItem(item, activeItem, setActiveItem);
-            })}
-        </div>
-    );
-};
+import { useState } from "react";
+import NextImage from "next/image";
 
 export interface PortfolioItemProps {
     name: string;
-    description: any;
+    description: React.ReactNode;
     link?: {
         link: string;
         text: string;
-        disabled?: boolean
+        disabled?: boolean;
     };
     image: string;
     tags: string[];
-    activeItem?: string | null;
-    setActiveItem?: Function
 }
 
-export type PartialPortfolioItemProps = Omit<PortfolioItemProps, 'activeItems' | 'setActiveItems'>
+interface PortfolioGridProps {
+    items: PortfolioItemProps[];
+}
 
-export function PortfolioItem({ name, description, link, image, tags, activeItem, setActiveItem }: PartialPortfolioItemProps) {
+export default function PortfolioGrid({ items }: PortfolioGridProps) {
+    const [activeItem, setActiveItem] = useState<string | null>(null);
 
-    return <Card className={" " + (activeItem === name ? 'col-span-2 row-span-2' : 'max-h-[320px]')} shadow-sm="sm" isPressable onPress={() => setActiveItem && setActiveItem(activeItem === name ? null : name)}>
-        <CardHeader className="flex gap-3">
-            {/* <Image
-                alt="nextui logo"
-                height={40}
-                radius="sm"
-                src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-                width={40}
-            /> */}
-            <div className="flex flex-col items-start">
-                <p className="text-md text-left">{name}</p>
-                {link ? <Link isDisabled={link.disabled} isExternal showAnchorIcon href={link.link}>{link.text}</Link> : <div>&nbsp;</div>}
-
-            </div>
-        </CardHeader>
-        <Divider />
-        <CardBody className="overflow-hidden">
-            <div className="overflow-hidden rounded-xl w-full">
-            <Image
-                alt="11Freunde App"
-                className="object-cover rounded-xl max-h-80 h-full w-full"
-                src={image}
-                isZoomed={activeItem !== name}
-                removeWrapper
-            />
-            </div>
-
-
-            {activeItem === name && <div className="mt-4 text-sm leading-relaxed space-y-3">{description}</div>}
-        </CardBody>
-        <Divider />
-        <CardFooter>
-            <div className="flex gap-1 overflow-auto">
-                {tags.map((tag, index) => {
-                    return (<Chip key={`${name}-${index}`}>{tag}</Chip>)
-                })}
-
-            </div>
-        </CardFooter>
-    </Card>
+    return (
+        <div className="grid gap-2 xl:gap-4 grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+            {items.map((item) => {
+                const isActive = activeItem === item.name;
+                return (
+                    <Card
+                        key={item.name}
+                        className={isActive ? 'col-span-2 row-span-2' : 'max-h-[320px]'}
+                        shadow="sm"
+                        isPressable
+                        onPress={() => setActiveItem(isActive ? null : item.name)}
+                    >
+                        <CardHeader className="flex gap-3">
+                            <div className="flex flex-col items-start">
+                                <p className="text-md text-left">{item.name}</p>
+                                {item.link
+                                    ? <Link className="text-left" isDisabled={item.link.disabled} isExternal showAnchorIcon href={item.link.link}>{item.link.text}</Link>
+                                    : <div>&nbsp;</div>
+                                }
+                            </div>
+                        </CardHeader>
+                        <Divider />
+                        <CardBody className="overflow-hidden">
+                            <div className="overflow-hidden rounded-xl w-full relative" style={{ aspectRatio: '16/9' }}>
+                                <Image
+                                    as={NextImage}
+                                    alt={item.name}
+                                    className="object-cover rounded-xl"
+                                    src={`/${item.image}`}
+                                    fill
+                                    sizes="(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                                    loading="lazy"
+                                    isZoomed={!isActive}
+                                    removeWrapper
+                                />
+                            </div>
+                            {isActive && <div className="mt-4 text-sm leading-relaxed space-y-3">{item.description}</div>}
+                        </CardBody>
+                        <Divider />
+                        <CardFooter>
+                            <div className="flex gap-1 overflow-auto">
+                                {item.tags.map((tag, index) => (
+                                    <Chip key={`${item.name}-${index}`}>{tag}</Chip>
+                                ))}
+                            </div>
+                        </CardFooter>
+                    </Card>
+                );
+            })}
+        </div>
+    );
 }
