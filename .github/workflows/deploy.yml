@@ -48,7 +48,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: >
+    - name: Fetch API endpoint
+      run: >
         API_ID=$(aws apigateway get-rest-apis --query 'items[?name==`ContactAPI`].id | [0]' --output text);
         echo "NEXT_PUBLIC_API_URL=https://${API_ID}.execute-api.${{env.AWS_REGION}}.amazonaws.com/${{env.AWS_API_GW_STAGE_NAME}}/" >> "$GITHUB_ENV";
         
