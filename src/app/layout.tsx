@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     siteName: "Jonas Miederer",
     locale: "en_US",
     type: "website",
+    images: [{ url: "https://jonas-miederer.de/og-image.png", width: 1200, height: 630 }],
   },
 };
 
