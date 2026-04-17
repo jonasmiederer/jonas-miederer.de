@@ -21,7 +21,7 @@ export default function RootLayout({
       <head>
         <script defer src="https://cloud.umami.is/script.js" data-website-id="3df5ab65-8047-436b-9d07-b20c9429efe1"></script>
       </head>
-      <body className="purple-dark text-foreground bg-background bg-background font-sans antialiased" >
+      <body className={`purple-dark text-foreground bg-background font-sans antialiased ${inter.className}`}>
         <Providers>
           <ToastProvider />
           {children}
