@@ -79,6 +79,17 @@ export default function Certification() {
                 img: 'https://images.credly.com/size/110x110/images/2d84e428-9078-49b6-a804-13c15383d0de/image.png',
                 link: 'https://www.credly.com/badges/c64ce7ef-490b-407a-8455-7d4d1156047f/public_url'
             },
+                  {
+                title: 'AWS Certified Generative AI Developer – Professional',
+                img: 'https://images.credly.com/size/680x680/images/52c6e5ac-9516-4944-a4df-e31b23c9bbf2/blob',
+                link: 'https://www.credly.com/badges/6a9916b9-230f-438d-a92e-626d10d6cf0b/public_url'
+            },
+            {
+                title: 'AWS Certified Security – Specialty',
+                img: 'https://images.credly.com/size/680x680/images/53acdae5-d69f-4dda-b650-d02ed7a50dd7/image.png',
+                link: 'https://www.credly.com/badges/e540e24a-f4ce-46c7-82e9-dc37fce8611a/public_url'
+            },
+      
         ], [
             {
                 title: 'GCP Cloud Digital Leader',
