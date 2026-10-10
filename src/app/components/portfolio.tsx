@@ -3,6 +3,16 @@ import PortfolioGrid, { PortfolioItemProps } from "./utils/portfolio";
 
 const items: PortfolioItemProps[] = [
     {
+        name: "Double Top",
+        image: "img/doubletop/image.webp",
+        link: { link: "https://doubletop.jonas-miederer.de/", text: "doubletop.jonas-miederer.de" },
+        tags: ["Web", "JavaScript", "PWA"],
+        description: <div>
+            <p className="italic text-default-600 font-medium">A darts tournament app for a party night — in a single HTML file.</p>
+            <p>Players, randomly drawn groups, a group stage and a knockout bracket, with games from 101–701 to Cricket and Elimination 301. Dart-by-dart scoring, live stats, checkout suggestions and a phone-friendly layout. No install, no server — everything is saved locally in the browser.</p>
+        </div>
+    },
+    {
         name: "11Freunde Liveticker @ ICE Portal",
         image: "img/11f_bahnapi/image.webp",
         link: { link: "https://iceportal.de/", text: "iceportal.de" },
