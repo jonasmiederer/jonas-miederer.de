@@ -3,6 +3,17 @@ import PortfolioGrid, { PortfolioItemProps } from "./utils/portfolio";
 
 const items: PortfolioItemProps[] = [
     {
+        name: "Sous",
+        image: "img/sous/image.webp",
+        link: { link: "https://sous.jonas-miederer.de/", text: "sous.jonas-miederer.de" },
+        tags: ["AWS", "Bedrock AgentCore", "React", "TypeScript", "PWA"],
+        description: <div>
+            <p className="italic text-default-600 font-medium">A meal planner for households, built entirely on AWS.</p>
+            <p>Ask for ad hoc meal suggestions or a full week plan, tell Sous what is in the fridge and refine anything by chat or voice. It learns the household&apos;s preferences and applies them to everyone in it. Grocery lists are generated from the plans.</p>
+            <p>The suggestion agent runs on Amazon Bedrock AgentCore with Claude, preferences live in AgentCore Memory. Backend on API Gateway, Lambda, DynamoDB and Cognito, infrastructure in AWS CDK, installable React PWA on S3 and CloudFront.</p>
+        </div>
+    },
+    {
         name: "Double Top",
         image: "img/doubletop/image.webp",
         link: { link: "https://doubletop.jonas-miederer.de/", text: "doubletop.jonas-miederer.de" },
