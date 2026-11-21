@@ -8,28 +8,28 @@ import Navbar from "./navbar";
 
 export default function Home() {
   return (
-    <div className="flex-col">
+    <main className="flex-col">
       {/* <Navbar></Navbar> */}
 
-      <div id="about" className="flex justify-center">
+      <section id="about" className="flex justify-center">
         <About></About>
-      </div>
+      </section>
 
-      <div id="certification" className="flex justify-center">
+      <section id="certification" className="flex justify-center">
         <Certification></Certification>
-      </div>
+      </section>
 
-      <div id="experience" className="flex justify-center">
+      <section id="experience" className="flex justify-center">
         <Experience></Experience>
-      </div>
+      </section>
 
-      <div id="portfolio" className="flex justify-center">
+      <section id="portfolio" className="flex justify-center">
         <Portfolio></Portfolio>
-      </div>
+      </section>
 
-      <div id="contact" className="flex justify-center">
+      <section id="contact" className="flex justify-center">
         <Contact></Contact>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }

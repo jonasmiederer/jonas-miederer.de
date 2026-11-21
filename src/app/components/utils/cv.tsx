@@ -33,7 +33,7 @@ export function CVItem({ year, title, description }: CVItemType) {
 
 
         <div className="grow ">
-            <h2 className="inline-block text-2xl font-bold">{title}</h2>
+            <h3 className="inline-block text-2xl font-bold">{title}</h3>
 
             <p className="">{description}</p>
         </div>

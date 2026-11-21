@@ -37,7 +37,7 @@ const svg = `
   <text x="80" y="240" font-family="system-ui, sans-serif" font-size="80" font-weight="700" fill="url(#textGrad)">Jonas Miederer</text>
 
   <!-- Role -->
-  <text x="80" y="310" font-family="system-ui, sans-serif" font-size="34" fill="#a0a0c0">Cloud Architect &amp; Software Engineer</text>
+  <text x="80" y="310" font-family="system-ui, sans-serif" font-size="34" fill="#a0a0c0">Solutions Architect &amp; Software Engineer</text>
 
   <!-- Divider -->
   <rect x="80" y="350" width="80" height="3" fill="#FF72E1" rx="2"/>

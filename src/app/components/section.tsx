@@ -20,7 +20,7 @@ export default function Section({ title, content }: SectionType) {
             {/* shadow-xs shadow-gray-800 p-3.5 border border-slate-800 */}
             <div className="box-left w-full xl:w-1/5">
                 {/* <h1 className="font-bold bg-linear-to-r  from-indigo-500 via-purple-500 to-pink-500 text-8xl" >{title}</h1> */}
-                <h1 className={"font-bold tracking-tight inline font-semibold from-[#FF72E1] to-[#F54C7A] text-3xl lg:text-7xl bg-clip-text text-transparent bg-linear-to-b break-words " + modak.className} >{title}</h1>
+                <h2 className={"font-bold tracking-tight inline font-semibold from-[#FF72E1] to-[#F54C7A] text-3xl lg:text-7xl bg-clip-text text-transparent bg-linear-to-b break-words " + modak.className} >{title}</h2>
 
             </div>
 
